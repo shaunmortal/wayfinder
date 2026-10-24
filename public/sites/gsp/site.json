@@ -1,0 +1,1381 @@
+{
+ "id": "gsp",
+ "outdoor": true,
+ "tab": {
+  "en": "Global Skills Park",
+  "hi": "ग्लोबल स्किल्स पार्क"
+ },
+ "name": {
+  "en": "SSR Global Skills Park, Bhopal",
+  "hi": "एसएसआर ग्लोबल स्किल्स पार्क, भोपाल"
+ },
+ "floors": [
+  {
+   "id": "CAMPUS",
+   "btn": "G",
+   "en": "Campus",
+   "hi": "कैंपस",
+   "sumEn": "All buildings, roads, entries and parking",
+   "sumHi": "सभी इमारतें, सड़कें, प्रवेश द्वार और पार्किंग"
+  }
+ ],
+ "shells": {},
+ "cores": [],
+ "points": [
+  {
+   "id": "GSP-J1",
+   "floor": "CAMPUS",
+   "x": 57,
+   "y": 1548
+  },
+  {
+   "id": "GSP-J1b",
+   "floor": "CAMPUS",
+   "x": 283,
+   "y": 1543
+  },
+  {
+   "id": "GSP-J2",
+   "floor": "CAMPUS",
+   "x": 676,
+   "y": 1539
+  },
+  {
+   "id": "GSP-J2b",
+   "floor": "CAMPUS",
+   "x": 1199,
+   "y": 1535
+  },
+  {
+   "id": "GSP-J3",
+   "floor": "CAMPUS",
+   "x": 1897,
+   "y": 1526
+  },
+  {
+   "id": "GSP-J3b",
+   "floor": "CAMPUS",
+   "x": 2463,
+   "y": 1513
+  },
+  {
+   "id": "GSP-J4",
+   "floor": "CAMPUS",
+   "x": 3030,
+   "y": 1495
+  },
+  {
+   "id": "GSP-D1",
+   "floor": "CAMPUS",
+   "x": 3292,
+   "y": 1304
+  },
+  {
+   "id": "GSP-D2",
+   "floor": "CAMPUS",
+   "x": 3815,
+   "y": 972
+  },
+  {
+   "id": "GSP-D3",
+   "floor": "CAMPUS",
+   "x": 4251,
+   "y": 698
+  },
+  {
+   "id": "GSP-D4",
+   "floor": "CAMPUS",
+   "x": 4425,
+   "y": 589
+  },
+  {
+   "id": "GSP-XPW",
+   "floor": "CAMPUS",
+   "x": 676,
+   "y": 1068
+  },
+  {
+   "id": "GSP-C1",
+   "floor": "CAMPUS",
+   "x": 676,
+   "y": 828
+  },
+  {
+   "id": "GSP-C2",
+   "floor": "CAMPUS",
+   "x": 1308,
+   "y": 828
+  },
+  {
+   "id": "GSP-C3",
+   "floor": "CAMPUS",
+   "x": 1897,
+   "y": 828
+  },
+  {
+   "id": "GSP-C4",
+   "floor": "CAMPUS",
+   "x": 2463,
+   "y": 828
+  },
+  {
+   "id": "GSP-C5",
+   "floor": "CAMPUS",
+   "x": 3030,
+   "y": 828
+  },
+  {
+   "id": "GSP-XPE",
+   "floor": "CAMPUS",
+   "x": 3030,
+   "y": 1068
+  },
+  {
+   "id": "GSP-WR2",
+   "floor": "CAMPUS",
+   "x": 57,
+   "y": 741
+  },
+  {
+   "id": "GSP-WR3",
+   "floor": "CAMPUS",
+   "x": 57,
+   "y": 31
+  },
+  {
+   "id": "GSP-N1",
+   "floor": "CAMPUS",
+   "x": 763,
+   "y": 22
+  },
+  {
+   "id": "GSP-N2",
+   "floor": "CAMPUS",
+   "x": 1897,
+   "y": 13
+  },
+  {
+   "id": "GSP-N3",
+   "floor": "CAMPUS",
+   "x": 3030,
+   "y": 4
+  },
+  {
+   "id": "GSP-N4",
+   "floor": "CAMPUS",
+   "x": 4338,
+   "y": 22
+  }
+ ],
+ "walks": [
+  [
+   "GSP-J1",
+   "GSP-J1b"
+  ],
+  [
+   "GSP-J1b",
+   "GSP-J2"
+  ],
+  [
+   "GSP-J2",
+   "GSP-J2b"
+  ],
+  [
+   "GSP-J2b",
+   "GSP-J3"
+  ],
+  [
+   "GSP-J3",
+   "GSP-J3b"
+  ],
+  [
+   "GSP-J3b",
+   "GSP-J4"
+  ],
+  [
+   "GSP-J4",
+   "GSP-D1"
+  ],
+  [
+   "GSP-D1",
+   "GSP-D2"
+  ],
+  [
+   "GSP-D2",
+   "GSP-D3"
+  ],
+  [
+   "GSP-D3",
+   "GSP-D4"
+  ],
+  [
+   "GSP-C1",
+   "GSP-C2"
+  ],
+  [
+   "GSP-C2",
+   "GSP-C3"
+  ],
+  [
+   "GSP-C3",
+   "GSP-C4"
+  ],
+  [
+   "GSP-C4",
+   "GSP-C5"
+  ],
+  [
+   "GSP-WR3",
+   "GSP-N1"
+  ],
+  [
+   "GSP-N1",
+   "GSP-N2"
+  ],
+  [
+   "GSP-N2",
+   "GSP-N3"
+  ],
+  [
+   "GSP-N3",
+   "GSP-N4"
+  ],
+  [
+   "GSP-J1",
+   "GSP-WR2"
+  ],
+  [
+   "GSP-WR2",
+   "GSP-WR3"
+  ],
+  [
+   "GSP-J2",
+   "GSP-XPW"
+  ],
+  [
+   "GSP-XPW",
+   "GSP-C1"
+  ],
+  [
+   "GSP-J4",
+   "GSP-XPE"
+  ],
+  [
+   "GSP-XPE",
+   "GSP-C5"
+  ],
+  [
+   "GSP-C5",
+   "GSP-N3"
+  ]
+ ],
+ "places": [
+  {
+   "id": "GSP-E1",
+   "gate": true,
+   "door": [
+    0,
+    1557
+   ],
+   "via": "GSP-J1",
+   "labelAt": [
+    -109,
+    1700
+   ],
+   "mat": [
+    [
+     -22,
+     1513
+    ],
+    [
+     48,
+     1513
+    ],
+    [
+     48,
+     1600
+    ],
+    [
+     -22,
+     1600
+    ]
+   ],
+   "cat": "service",
+   "code": "E1",
+   "en": "Entry 1 · Main Gate",
+   "hi": "प्रवेश 1 · मुख्य गेट",
+   "enS": "Entry 1",
+   "hiS": "प्रवेश 1",
+   "subEn": "24 m road",
+   "subHi": "24 मीटर रोड",
+   "kw": "gate main gate entry entrance exit bahar nikalna security entry 1",
+   "floor": "CAMPUS",
+   "num": false
+  },
+  {
+   "id": "GSP-E2",
+   "gate": true,
+   "door": [
+    0,
+    741
+   ],
+   "via": "GSP-WR2",
+   "labelAt": [
+    -131,
+    828
+   ],
+   "cat": "service",
+   "code": "E2",
+   "en": "Entry 2",
+   "hi": "प्रवेश 2",
+   "enS": "Entry 2",
+   "hiS": "प्रवेश 2",
+   "kw": "gate entry 2 entrance",
+   "floor": "CAMPUS",
+   "num": false
+  },
+  {
+   "id": "GSP-E3",
+   "gate": true,
+   "door": [
+    0,
+    31
+   ],
+   "via": "GSP-WR3",
+   "labelAt": [
+    -131,
+    118
+   ],
+   "cat": "service",
+   "code": "E3",
+   "en": "Entry 3",
+   "hi": "प्रवेश 3",
+   "enS": "Entry 3",
+   "hiS": "प्रवेश 3",
+   "kw": "gate entry 3 entrance north",
+   "floor": "CAMPUS",
+   "num": false
+  },
+  {
+   "id": "GSP-ACE",
+   "block": true,
+   "h": 110,
+   "parts": [
+    {
+     "r": [
+      1308,
+      1003,
+      1722,
+      1286
+     ],
+     "h": 100
+    },
+    {
+     "r": [
+      2071,
+      1003,
+      2463,
+      1286
+     ],
+     "h": 100
+    },
+    {
+     "r": [
+      1722,
+      916,
+      2071,
+      1308
+     ],
+     "h": 140
+    }
+   ],
+   "rect": [
+    1722,
+    916,
+    2071,
+    1308
+   ],
+   "door": [
+    1897,
+    916
+   ],
+   "via": "GSP-C3",
+   "cat": "hall",
+   "code": "ACE",
+   "en": "Academic, Conference & Exhibition (ACE)",
+   "hi": "अकादमिक, सम्मेलन और प्रदर्शनी भवन (ACE)",
+   "enS": "ACE Building",
+   "hiS": "ACE भवन",
+   "kw": "ace academic conference exhibition hall seminar event hackathon auditorium meeting convention building sandipani sabhagar",
+   "link": {
+    "site": "cb",
+    "node": "CB-PLAZA",
+    "label": {
+     "en": "Open the inside map (Convention Building)",
+     "hi": "अंदर का नक्शा खोलें (कन्वेंशन भवन)"
+    }
+   },
+   "floor": "CAMPUS",
+   "num": false
+  },
+  {
+   "id": "GSP-COSA",
+   "block": true,
+   "h": 120,
+   "parts": [
+    {
+     "r": [
+      1635,
+      392,
+      2158,
+      567
+     ],
+     "h": 120
+    },
+    {
+     "r": [
+      1025,
+      109,
+      2769,
+      283
+     ],
+     "h": 110
+    },
+    {
+     "r": [
+      807,
+      196,
+      1025,
+      676
+     ],
+     "h": 110
+    },
+    {
+     "r": [
+      2769,
+      196,
+      2965,
+      676
+     ],
+     "h": 110
+    },
+    {
+     "r": [
+      1068,
+      392,
+      1548,
+      654
+     ],
+     "h": 110
+    },
+    {
+     "r": [
+      2245,
+      392,
+      2725,
+      654
+     ],
+     "h": 110
+    }
+   ],
+   "rect": [
+    1635,
+    392,
+    2158,
+    567
+   ],
+   "door": [
+    1897,
+    567
+   ],
+   "via": "GSP-C3",
+   "cat": "learn",
+   "code": "COSA",
+   "en": "Centre for Occupational Skills Acquisition (COSA)",
+   "hi": "व्यावसायिक कौशल अर्जन केंद्र (COSA)",
+   "enS": "COSA",
+   "hiS": "COSA",
+   "kw": "cosa workshop trades engineering mechatronics automotive classroom lab training",
+   "floor": "CAMPUS",
+   "num": false
+  },
+  {
+   "id": "GSP-FIELD",
+   "flat": true,
+   "rect": [
+    118,
+    74,
+    632,
+    1365
+   ],
+   "door": [
+    632,
+    828
+   ],
+   "via": "GSP-C1",
+   "cat": "park",
+   "code": "FLD",
+   "en": "Sports Field",
+   "hi": "खेल का मैदान",
+   "enS": "Sports Field",
+   "hiS": "खेल मैदान",
+   "kw": "sports field ground khel maidan track",
+   "floor": "CAMPUS",
+   "num": false
+  },
+  {
+   "id": "GSP-PW",
+   "flat": true,
+   "rect": [
+    728,
+    763,
+    1046,
+    1352
+   ],
+   "door": [
+    728,
+    1068
+   ],
+   "via": "GSP-XPW",
+   "cat": "park",
+   "code": "P1",
+   "en": "Parking (west of ACE)",
+   "hi": "पार्किंग (ACE के पश्चिम)",
+   "enS": "Parking West",
+   "hiS": "पार्किंग पश्चिम",
+   "kw": "parking car bike gaadi vehicle",
+   "floor": "CAMPUS",
+   "num": false
+  },
+  {
+   "id": "GSP-PE",
+   "flat": true,
+   "rect": [
+    2725,
+    807,
+    2978,
+    1352
+   ],
+   "door": [
+    2978,
+    1068
+   ],
+   "via": "GSP-XPE",
+   "cat": "park",
+   "code": "P2",
+   "en": "Parking (east of ACE)",
+   "hi": "पार्किंग (ACE के पूर्व)",
+   "enS": "Parking East",
+   "hiS": "पार्किंग पूर्व",
+   "kw": "parking car bike gaadi vehicle",
+   "floor": "CAMPUS",
+   "num": false
+  },
+  {
+   "id": "GSP-BUS",
+   "flat": true,
+   "rect": [
+    31,
+    1613,
+    523,
+    1984
+   ],
+   "door": [
+    283,
+    1613
+   ],
+   "via": "GSP-J1b",
+   "cat": "park",
+   "code": "BUS",
+   "en": "Transportation & Bus Parking",
+   "hi": "परिवहन और बस पार्किंग",
+   "enS": "Bus Parking",
+   "hiS": "बस पार्किंग",
+   "kw": "bus parking transport",
+   "floor": "CAMPUS",
+   "num": false
+  },
+  {
+   "id": "GSP-STAFF",
+   "block": true,
+   "h": 70,
+   "parts": [
+    {
+     "r": [
+      1134,
+      1744,
+      1264,
+      2202
+     ],
+     "h": 70
+    }
+   ],
+   "rect": [
+    1134,
+    1744,
+    1264,
+    2202
+   ],
+   "door": [
+    1199,
+    1744
+   ],
+   "via": "GSP-J2b",
+   "cat": "stay",
+   "code": "SQ",
+   "en": "Staff Quarters",
+   "hi": "स्टाफ क्वार्टर",
+   "enS": "Staff Quarters",
+   "hiS": "स्टाफ क्वार्टर",
+   "kw": "staff quarters housing residence",
+   "floor": "CAMPUS",
+   "num": false
+  },
+  {
+   "id": "GSP-SUP",
+   "block": true,
+   "h": 50,
+   "parts": [
+    {
+     "r": [
+      1853,
+      1570,
+      2158,
+      1788
+     ],
+     "h": 50
+    }
+   ],
+   "rect": [
+    1853,
+    1570,
+    2158,
+    1788
+   ],
+   "door": [
+    1984,
+    1570
+   ],
+   "via": "GSP-J3",
+   "cat": "service",
+   "code": "SUP",
+   "en": "Support Infrastructure",
+   "hi": "सहायक अवसंरचना",
+   "enS": "Support Infra",
+   "hiS": "सहायक भवन",
+   "kw": "support infrastructure utility",
+   "floor": "CAMPUS",
+   "num": false
+  },
+  {
+   "id": "GSP-COM",
+   "block": true,
+   "h": 60,
+   "parts": [
+    {
+     "r": [
+      2311,
+      1591,
+      2638,
+      1853
+     ],
+     "h": 60
+    }
+   ],
+   "rect": [
+    2311,
+    1591,
+    2638,
+    1853
+   ],
+   "door": [
+    2463,
+    1591
+   ],
+   "via": "GSP-J3b",
+   "cat": "food",
+   "code": "COM",
+   "en": "Community Facilities",
+   "hi": "सामुदायिक सुविधाएँ",
+   "enS": "Community",
+   "hiS": "सामुदायिक",
+   "kw": "community facilities",
+   "floor": "CAMPUS",
+   "num": false
+  },
+  {
+   "id": "GSP-B8",
+   "block": true,
+   "h": 90,
+   "parts": [
+    {
+     "r": [
+      3139,
+      523,
+      3292,
+      763
+     ],
+     "h": 90
+    },
+    {
+     "r": [
+      3248,
+      654,
+      3597,
+      872
+     ],
+     "h": 90
+    }
+   ],
+   "rect": [
+    3248,
+    654,
+    3597,
+    872
+   ],
+   "door": [
+    3423,
+    872
+   ],
+   "via": "GSP-D1",
+   "cat": "learn",
+   "code": "B8",
+   "en": "C.I.S.T. and C.D.S.S. (Building 8)",
+   "hi": "C.I.S.T. और C.D.S.S. (भवन 8)",
+   "enS": "CIST & CDSS",
+   "hiS": "CIST और CDSS",
+   "kw": "cist cdss building 8 research innovation incubation",
+   "floor": "CAMPUS",
+   "num": false
+  },
+  {
+   "id": "GSP-CAAT",
+   "block": true,
+   "h": 60,
+   "parts": [
+    {
+     "r": [
+      4164,
+      131,
+      4687,
+      480
+     ],
+     "h": 60
+    }
+   ],
+   "rect": [
+    4164,
+    131,
+    4687,
+    480
+   ],
+   "door": [
+    4338,
+    131
+   ],
+   "via": "GSP-N4",
+   "cat": "learn",
+   "code": "CAAT",
+   "en": "Centre for Advanced Agricultural Training (CAAT)",
+   "hi": "उन्नत कृषि प्रशिक्षण केंद्र (CAAT)",
+   "enS": "CAAT",
+   "hiS": "कृषि प्रशिक्षण",
+   "kw": "caat agriculture agri farming krishi green house",
+   "floor": "CAMPUS",
+   "num": false
+  },
+  {
+   "id": "GSP-H7",
+   "block": true,
+   "h": 130,
+   "parts": [
+    {
+     "r": [
+      2899,
+      1635,
+      3205,
+      1940
+     ],
+     "h": 130
+    },
+    {
+     "r": [
+      3139,
+      1461,
+      3510,
+      1722
+     ],
+     "h": 130
+    }
+   ],
+   "rect": [
+    3139,
+    1461,
+    3510,
+    1722
+   ],
+   "door": [
+    3292,
+    1461
+   ],
+   "via": "GSP-D1",
+   "cat": "stay",
+   "code": "H7",
+   "en": "Boys Hostel",
+   "hi": "बालक छात्रावास",
+   "enS": "Boys Hostel",
+   "hiS": "बालक छात्रावास",
+   "kw": "boys hostel ladke",
+   "floor": "CAMPUS",
+   "num": false
+  },
+  {
+   "id": "GSP-H6",
+   "block": true,
+   "h": 130,
+   "parts": [
+    {
+     "r": [
+      3401,
+      1243,
+      3728,
+      1548
+     ],
+     "h": 130
+    },
+    {
+     "r": [
+      3684,
+      1046,
+      3989,
+      1373
+     ],
+     "h": 130
+    }
+   ],
+   "rect": [
+    3684,
+    1046,
+    3989,
+    1373
+   ],
+   "door": [
+    3815,
+    1046
+   ],
+   "via": "GSP-D2",
+   "cat": "stay",
+   "code": "H6",
+   "en": "Trainers Hostel",
+   "hi": "प्रशिक्षक छात्रावास",
+   "enS": "Trainers Hostel",
+   "hiS": "प्रशिक्षक छात्रावास",
+   "kw": "trainers hostel faculty stay",
+   "floor": "CAMPUS",
+   "num": false
+  },
+  {
+   "id": "GSP-H5",
+   "block": true,
+   "h": 130,
+   "parts": [
+    {
+     "r": [
+      3924,
+      937,
+      4207,
+      1243
+     ],
+     "h": 130
+    },
+    {
+     "r": [
+      4186,
+      763,
+      4513,
+      1059
+     ],
+     "h": 130
+    }
+   ],
+   "rect": [
+    4186,
+    763,
+    4513,
+    1059
+   ],
+   "door": [
+    4251,
+    763
+   ],
+   "via": "GSP-D3",
+   "cat": "stay",
+   "code": "H5",
+   "en": "Ladies Hostel",
+   "hi": "महिला छात्रावास",
+   "enS": "Ladies Hostel",
+   "hiS": "महिला छात्रावास",
+   "kw": "ladies girls hostel ladkiyan mahila",
+   "floor": "CAMPUS",
+   "num": false
+  }
+ ],
+ "ground": {
+  "CAMPUS": [
+   [
+    0,
+    22
+   ],
+   [
+    3989,
+    0
+   ],
+   [
+    4600,
+    -4
+   ],
+   [
+    5232,
+    1591
+   ],
+   [
+    4469,
+    1221
+   ],
+   [
+    3859,
+    1657
+   ],
+   [
+    3205,
+    2049
+   ],
+   [
+    2245,
+    1905
+   ],
+   [
+    1679,
+    1818
+   ],
+   [
+    1330,
+    2245
+   ],
+   [
+    1025,
+    2006
+   ],
+   [
+    632,
+    1897
+   ],
+   [
+    109,
+    2093
+   ],
+   [
+    13,
+    1591
+   ]
+  ]
+ },
+ "roads": {
+  "CAMPUS": [
+   {
+    "w": 100,
+    "pts": [
+     [
+      0,
+      1552
+     ],
+     [
+      57,
+      1548
+     ],
+     [
+      283,
+      1543
+     ],
+     [
+      676,
+      1539
+     ],
+     [
+      1199,
+      1535
+     ],
+     [
+      1897,
+      1526
+     ],
+     [
+      2463,
+      1513
+     ],
+     [
+      3030,
+      1495
+     ],
+     [
+      3292,
+      1304
+     ],
+     [
+      3815,
+      972
+     ],
+     [
+      4251,
+      698
+     ],
+     [
+      4425,
+      589
+     ]
+    ]
+   },
+   {
+    "w": 48,
+    "pts": [
+     [
+      676,
+      828
+     ],
+     [
+      1308,
+      828
+     ],
+     [
+      1897,
+      828
+     ],
+     [
+      2463,
+      828
+     ],
+     [
+      3030,
+      828
+     ]
+    ]
+   },
+   {
+    "w": 36,
+    "pts": [
+     [
+      57,
+      31
+     ],
+     [
+      763,
+      22
+     ],
+     [
+      1897,
+      13
+     ],
+     [
+      3030,
+      4
+     ],
+     [
+      4338,
+      22
+     ]
+    ]
+   },
+   {
+    "w": 30,
+    "pts": [
+     [
+      57,
+      1548
+     ],
+     [
+      57,
+      741
+     ],
+     [
+      57,
+      31
+     ]
+    ]
+   },
+   {
+    "w": 40,
+    "pts": [
+     [
+      676,
+      1539
+     ],
+     [
+      676,
+      1068
+     ],
+     [
+      676,
+      828
+     ]
+    ]
+   },
+   {
+    "w": 40,
+    "pts": [
+     [
+      3030,
+      1495
+     ],
+     [
+      3030,
+      1068
+     ],
+     [
+      3030,
+      828
+     ],
+     [
+      3030,
+      4
+     ]
+    ]
+   },
+   {
+    "w": 60,
+    "pts": [
+     [
+      1897,
+      567
+     ],
+     [
+      1897,
+      916
+     ]
+    ]
+   },
+   {
+    "w": 34,
+    "pts": [
+     [
+      57,
+      741
+     ],
+     [
+      0,
+      741
+     ]
+    ]
+   },
+   {
+    "w": 34,
+    "pts": [
+     [
+      57,
+      31
+     ],
+     [
+      0,
+      31
+     ]
+    ]
+   },
+   {
+    "w": 34,
+    "pts": [
+     [
+      1199,
+      1535
+     ],
+     [
+      1199,
+      1744
+     ]
+    ]
+   },
+   {
+    "w": 34,
+    "pts": [
+     [
+      1897,
+      1526
+     ],
+     [
+      1984,
+      1570
+     ]
+    ]
+   },
+   {
+    "w": 34,
+    "pts": [
+     [
+      2463,
+      1513
+     ],
+     [
+      2463,
+      1591
+     ]
+    ]
+   },
+   {
+    "w": 34,
+    "pts": [
+     [
+      3292,
+      1304
+     ],
+     [
+      3292,
+      1461
+     ]
+    ]
+   },
+   {
+    "w": 34,
+    "pts": [
+     [
+      3292,
+      1304
+     ],
+     [
+      3423,
+      872
+     ]
+    ]
+   },
+   {
+    "w": 34,
+    "pts": [
+     [
+      3815,
+      972
+     ],
+     [
+      3815,
+      1046
+     ]
+    ]
+   },
+   {
+    "w": 34,
+    "pts": [
+     [
+      4251,
+      698
+     ],
+     [
+      4251,
+      763
+     ]
+    ]
+   },
+   {
+    "w": 34,
+    "pts": [
+     [
+      4338,
+      22
+     ],
+     [
+      4338,
+      131
+     ]
+    ]
+   }
+  ]
+ },
+ "landmarks": {
+  "GSP-C3": {
+   "en": "the plaza between COSA and ACE",
+   "hi": "COSA और ACE के बीच वाले चौक"
+  },
+  "GSP-J2": {
+   "en": "the road to Parking West",
+   "hi": "पार्किंग पश्चिम वाली सड़क"
+  },
+  "GSP-J4": {
+   "en": "the hostel road",
+   "hi": "छात्रावास वाली सड़क"
+  },
+  "GSP-N3": {
+   "en": "the road east of COSA",
+   "hi": "COSA के पूर्व वाली सड़क"
+  },
+  "GSP-C5": {
+   "en": "the road east of COSA",
+   "hi": "COSA के पूर्व वाली सड़क"
+  }
+ },
+ "defaults": {
+  "start": "GSP-E1",
+  "dest": "GSP-ACE"
+ },
+ "quick": [
+  "GSP-ACE",
+  "GSP-COSA",
+  "GSP-PW",
+  "GSP-FIELD",
+  "GSP-E1",
+  "GSP-B8"
+ ],
+ "popular": [
+  "GSP-ACE",
+  "GSP-COSA",
+  "GSP-PW",
+  "GSP-PE",
+  "GSP-FIELD",
+  "GSP-CAAT",
+  "GSP-B8",
+  "GSP-E1"
+ ],
+ "cats": [
+  "hall",
+  "learn",
+  "stay",
+  "park",
+  "food",
+  "service"
+ ],
+ "askPh": {
+  "en": "Try: event kahan hai, parking, COSA",
+  "hi": "जैसे: इवेंट कहाँ है, पार्किंग, COSA"
+ },
+ "notice": {
+  "en": "Map traced from the architect’s 2018 site plan in an Asian Development Bank report. Buildings may differ on the ground. Hackathon prototype, not an official SSRGSP app.",
+  "hi": "नक्शा एशियन डेवलपमेंट बैंक की रिपोर्ट में छपे आर्किटेक्ट के 2018 साइट प्लान से बना है। असली इमारतें अलग हो सकती हैं। यह हैकथॉन प्रोटोटाइप है, SSRGSP का आधिकारिक ऐप नहीं।"
+ },
+ "help": {
+  "desk": "GSP-ACE",
+  "deskT": {
+   "en": "Ask for help",
+   "hi": "मदद लें"
+  },
+  "deskD": {
+   "en": "The ACE building sits at the centre of the campus, south of COSA. Security staff at the entries can also point the way.",
+   "hi": "ACE भवन कैंपस के बीच में, COSA के दक्षिण में है। प्रवेश द्वारों पर सुरक्षा कर्मी भी रास्ता बता सकते हैं।"
+  }
+ },
+ "about": {
+  "en": [
+   "This map of Sant Shiromani Ravidas Global Skills Park is traced from the architect’s site plan (drawing 01, January 2018) printed in the Asian Development Bank’s September 2018 project report. Building numbers and names follow that drawing; heights are illustrative.",
+   "Routes run on a graph of the campus roads, so distances and walking times are estimates. Floors inside buildings are not mapped yet.",
+   "Built during Claude Impact Lab Bhopal as a prototype. It is not an official app of the Global Skills Park."
+  ],
+  "hi": [
+   "सन्त शिरोमणि रविदास ग्लोबल स्किल्स पार्क का यह नक्शा एशियन डेवलपमेंट बैंक की सितंबर 2018 की प्रोजेक्ट रिपोर्ट में छपे आर्किटेक्ट के साइट प्लान (ड्रॉइंग 01, जनवरी 2018) से बनाया गया है। इमारतों के नंबर और नाम उसी ड्रॉइंग से हैं; ऊँचाई सिर्फ़ दिखाने के लिए है।",
+   "रास्ते कैंपस की सड़कों के ग्राफ़ पर बनते हैं, इसलिए दूरी और समय अनुमान हैं। इमारतों के अंदर की मंज़िलें अभी नक्शे में नहीं हैं।",
+   "क्लॉड इम्पैक्ट लैब भोपाल में प्रोटोटाइप के रूप में बनाया गया। यह ग्लोबल स्किल्स पार्क का आधिकारिक ऐप नहीं है।"
+  ]
+ },
+ "aiRules": "- This campus is hosting the Claude Impact Lab Bhopal build day. If the visitor asks for the event, the hackathon, registration, a conference or the demos, choose GSP-ACE.\n- Parking means GSP-PW (or GSP-PE if they say east). Bus means GSP-BUS. Leaving, going out or the main gate means GSP-E1.\n- Workshops, labs or COSA mean GSP-COSA. Agriculture or CAAT means GSP-CAAT. Hostels: boys GSP-H7, trainers GSP-H6, ladies or girls GSP-H5.\n- Food, chai, washrooms and water are not mapped yet: choose GSP-ACE and say in the reply to ask the event volunteers there.\n- The auditorium (Sandipani Sabhagar), the stage, seminar rooms and green rooms are inside the Convention Building: choose GSP-ACE and say in the reply that its inside map opens from there.",
+ "photos": {
+  "GSP-E1": "photos/gsp-e1.jpg",
+  "GSP-ACE": "photos/gsp-ace.jpg",
+  "GSP-J1": "photos/gsp-j1.jpg",
+  "GSP-J1b": "photos/gsp-j1.jpg",
+  "GSP-J2": "photos/gsp-j2.jpg",
+  "GSP-C2": "photos/gsp-c2.jpg",
+  "GSP-C3": "photos/gsp-ace.jpg"
+ }
+}

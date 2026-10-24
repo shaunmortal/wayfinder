@@ -1,0 +1,1080 @@
+{
+ "id": "cb",
+ "tab": {
+  "en": "Convention Bldg",
+  "hi": "कन्वेंशन भवन"
+ },
+ "name": {
+  "en": "Convention Building · First Floor",
+  "hi": "कन्वेंशन भवन · पहली मंज़िल"
+ },
+ "parent": {
+  "site": "gsp",
+  "node": "GSP-ACE",
+  "label": {
+   "en": "Campus map",
+   "hi": "कैंपस का नक्शा"
+  }
+ },
+ "floors": [
+  {
+   "id": "1F",
+   "en": "First Floor",
+   "hi": "पहली मंज़िल",
+   "btn": "1",
+   "sumEn": "Sandipani Sabhagar, stage, green rooms, seminar rooms",
+   "sumHi": "सांदीपनि सभागार, स्टेज, ग्रीन रूम, सेमिनार रूम"
+  }
+ ],
+ "shells": {
+  "1F": []
+ },
+ "shellPoly": {
+  "1F": [
+   [
+    [
+     207,
+     60
+    ],
+    [
+     256,
+     60
+    ],
+    [
+     300,
+     80
+    ],
+    [
+     350,
+     99
+    ],
+    [
+     394,
+     109
+    ],
+    [
+     440,
+     103
+    ],
+    [
+     480,
+     90
+    ],
+    [
+     511,
+     80
+    ],
+    [
+     521,
+     96
+    ],
+    [
+     698,
+     361
+    ],
+    [
+     757,
+     433
+    ],
+    [
+     695,
+     475
+    ],
+    [
+     650,
+     440
+    ],
+    [
+     597,
+     453
+    ],
+    [
+     498,
+     479
+    ],
+    [
+     413,
+     489
+    ],
+    [
+     335,
+     482
+    ],
+    [
+     210,
+     459
+    ],
+    [
+     138,
+     472
+    ],
+    [
+     57,
+     433
+    ],
+    [
+     132,
+     338
+    ],
+    [
+     178,
+     282
+    ],
+    [
+     201,
+     260
+    ],
+    [
+     235,
+     200
+    ],
+    [
+     210,
+     165
+    ],
+    [
+     207,
+     90
+    ]
+   ]
+  ]
+ },
+ "planImg": {
+  "1F": {
+   "src": "plan-1f.png",
+   "x": 40,
+   "y": 40,
+   "w": 720,
+   "h": 455
+  }
+ },
+ "places": [
+  {
+   "floor": "1F",
+   "id": "CB-AUDI",
+   "poly": [
+    [
+     309,
+     187
+    ],
+    [
+     395,
+     196
+    ],
+    [
+     489,
+     181
+    ],
+    [
+     564,
+     364
+    ],
+    [
+     480,
+     376
+    ],
+    [
+     407,
+     381
+    ],
+    [
+     325,
+     375
+    ],
+    [
+     246,
+     361
+    ]
+   ],
+   "under": true,
+   "door": [
+    290,
+    240
+   ],
+   "via": "CB-L2",
+   "cat": "hall",
+   "code": "HALL",
+   "en": "Sandipani Sabhagar (Auditorium)",
+   "hi": "सांदीपनि सभागार (ऑडिटोरियम)",
+   "enS": "Sandipani Sabhagar",
+   "hiS": "सांदीपनि सभागार",
+   "labelAt": [
+    400,
+    320
+   ],
+   "kw": "auditorium sabhagar sandipani sabha hall main hall event hackathon presentation impact lab ceremony show function seminar hall सभागार ऑडिटोरियम हॉल",
+   "num": false
+  },
+  {
+   "floor": "1F",
+   "id": "CB-STAGE",
+   "poly": [
+    [
+     332,
+     197
+    ],
+    [
+     395,
+     200
+    ],
+    [
+     462,
+     197
+    ],
+    [
+     502,
+     240
+    ],
+    [
+     407,
+     263
+    ],
+    [
+     292,
+     243
+    ]
+   ],
+   "raise": 5,
+   "wallH": 4,
+   "door": [
+    388,
+    199
+   ],
+   "via": "CB-T3",
+   "cat": "hall",
+   "code": "STAGE",
+   "en": "Stage (entry from backstage)",
+   "hi": "स्टेज (बैकस्टेज से प्रवेश)",
+   "enS": "Stage",
+   "hiS": "स्टेज",
+   "kw": "stage manch backstage presenter presenting presentation mic podium मंच स्टेज",
+   "num": false
+  },
+  {
+   "floor": "1F",
+   "id": "CB-FGR",
+   "poly": [
+    [
+     315,
+     135
+    ],
+    [
+     384,
+     145
+    ],
+    [
+     384,
+     181
+    ],
+    [
+     328,
+     174
+    ]
+   ],
+   "door": [
+    350,
+    140
+   ],
+   "via": "CB-T2",
+   "cat": "service",
+   "code": "F.GR",
+   "en": "Green Room (Women)",
+   "hi": "ग्रीन रूम (महिला)",
+   "enS": "F. Green Room",
+   "hiS": "महिला ग्रीन रूम",
+   "kw": "green room female women ladies greenroom changing makeup performer ग्रीन रूम",
+   "num": false
+  },
+  {
+   "floor": "1F",
+   "id": "CB-MGR",
+   "poly": [
+    [
+     413,
+     142
+    ],
+    [
+     485,
+     138
+    ],
+    [
+     485,
+     168
+    ],
+    [
+     420,
+     181
+    ]
+   ],
+   "door": [
+    450,
+    140
+   ],
+   "via": "CB-T4",
+   "cat": "service",
+   "code": "M.GR",
+   "en": "Green Room (Men)",
+   "hi": "ग्रीन रूम (पुरुष)",
+   "enS": "M. Green Room",
+   "hiS": "पुरुष ग्रीन रूम",
+   "kw": "green room male men gents greenroom changing performer ग्रीन रूम",
+   "num": false
+  },
+  {
+   "floor": "1F",
+   "id": "CB-101",
+   "poly": [
+    [
+     235,
+     393
+    ],
+    [
+     332,
+     408
+    ],
+    [
+     332,
+     483
+    ],
+    [
+     212,
+     458
+    ]
+   ],
+   "door": [
+    290,
+    402
+   ],
+   "via": "CB-B1",
+   "cat": "learn",
+   "code": "CB-101",
+   "num": false,
+   "en": "Seminar Room CB-101",
+   "hi": "सेमिनार रूम CB-101",
+   "enS": "CB-101 Seminar",
+   "hiS": "CB-101 सेमिनार",
+   "kw": "cb-101 cb101 101 seminar room jury judges jury seat meeting classroom सेमिनार"
+  },
+  {
+   "floor": "1F",
+   "id": "CB-SRC",
+   "poly": [
+    [
+     332,
+     408
+    ],
+    [
+     407,
+     411
+    ],
+    [
+     475,
+     407
+    ],
+    [
+     475,
+     480
+    ],
+    [
+     413,
+     489
+    ],
+    [
+     332,
+     483
+    ]
+   ],
+   "door": [
+    407,
+    411
+   ],
+   "via": "CB-B3",
+   "cat": "learn",
+   "code": "SEM",
+   "en": "Seminar Room (centre)",
+   "hi": "सेमिनार रूम (बीच वाला)",
+   "enS": "Seminar Room",
+   "hiS": "सेमिनार रूम",
+   "kw": "seminar room centre middle meeting classroom media room सेमिनार",
+   "num": false
+  },
+  {
+   "floor": "1F",
+   "id": "CB-SRE",
+   "poly": [
+    [
+     475,
+     407
+    ],
+    [
+     567,
+     387
+    ],
+    [
+     593,
+     453
+    ],
+    [
+     498,
+     479
+    ],
+    [
+     475,
+     480
+    ]
+   ],
+   "door": [
+    520,
+    397
+   ],
+   "via": "CB-B45",
+   "cat": "learn",
+   "code": "SEM",
+   "en": "Seminar Room (east end)",
+   "hi": "सेमिनार रूम (आख़िरी वाला)",
+   "enS": "Seminar Room (east)",
+   "hiS": "सेमिनार रूम (पूर्व)",
+   "kw": "seminar room east last end meeting classroom सेमिनार",
+   "num": false
+  },
+  {
+   "floor": "1F",
+   "id": "CB-REG",
+   "door": [
+    228,
+    168
+   ],
+   "via": "CB-LOB",
+   "labelAt": [
+    220,
+    160
+   ],
+   "cat": "service",
+   "code": "REG",
+   "en": "Registration Desk",
+   "hi": "रजिस्ट्रेशन डेस्क",
+   "enS": "Registration",
+   "hiS": "रजिस्ट्रेशन",
+   "subEn": "Event help desk",
+   "subHi": "इवेंट हेल्प डेस्क",
+   "kw": "registration register desk help helpdesk enquiry reception volunteer id card badge lanyard kit entry pass रजिस्ट्रेशन पंजीकरण मदद",
+   "num": false
+  },
+  {
+   "floor": "1F",
+   "id": "CB-WC",
+   "door": [
+    641,
+    393
+   ],
+   "via": "CB-R5",
+   "labelAt": [
+    650,
+    398
+   ],
+   "cat": "service",
+   "code": "WC",
+   "en": "Toilets (Gents and Ladies)",
+   "hi": "शौचालय (पुरुष और महिला)",
+   "enS": "Toilets",
+   "hiS": "शौचालय",
+   "subEn": "Follow the TOILET sign",
+   "subHi": "TOILET बोर्ड की ओर",
+   "kw": "toilet toilets washroom bathroom restroom loo urinal ladies gents mens womens shauchalay shauchalaya bathroom kahan pishab sulabh शौचालय टॉयलेट बाथरूम प्रसाधन",
+   "num": false
+  },
+  {
+   "floor": "1F",
+   "id": "CB-PLAZA",
+   "gate": true,
+   "door": [
+    208,
+    80
+   ],
+   "via": "CB-G0",
+   "labelAt": [
+    180,
+    93
+   ],
+   "cat": "service",
+   "code": "IN",
+   "en": "Front stairs from the campus plaza",
+   "hi": "कैंपस प्लाज़ा से सामने की सीढ़ियाँ",
+   "enS": "Front stairs (entry)",
+   "hiS": "सामने की सीढ़ियाँ (प्रवेश)",
+   "subEn": "From outside, by the AUDITORIUM sign",
+   "subHi": "बाहर से, AUDITORIUM बोर्ड वाली सीढ़ियाँ",
+   "kw": "entry entrance exit gate bahar outside front stairs plaza campus parking leave nikalna बाहर प्रवेश",
+   "link": {
+    "site": "gsp",
+    "node": "GSP-ACE",
+    "label": {
+     "en": "Continue on the campus map",
+     "hi": "कैंपस के नक्शे पर आगे देखें"
+    }
+   },
+   "num": false
+  }
+ ],
+ "cores": [
+  {
+   "id": "CB-L1",
+   "floor": "1F",
+   "kind": "lift",
+   "group": "CB-L1",
+   "rect": [
+    114,
+    335,
+    142,
+    363
+   ],
+   "at": [
+    128,
+    349
+   ],
+   "door": [
+    145,
+    363
+   ],
+   "via": "CB-LL",
+   "en": "Lift L-1 (food court is downstairs)",
+   "hi": "लिफ्ट L-1 (फ़ूड कोर्ट नीचे है)",
+   "enS": "Lift L-1",
+   "hiS": "लिफ्ट L-1"
+  },
+  {
+   "id": "CB-S1",
+   "floor": "1F",
+   "kind": "stairs",
+   "group": "CB-S1",
+   "rect": [
+    81,
+    409,
+    109,
+    437
+   ],
+   "at": [
+    95,
+    423
+   ],
+   "door": [
+    131,
+    393
+   ],
+   "via": "CB-LL",
+   "en": "Stair S-1 · emergency exit",
+   "hi": "सीढ़ी S-1 · आपातकालीन निकास",
+   "enS": "Stair S-1",
+   "hiS": "सीढ़ी S-1"
+  },
+  {
+   "id": "CB-SL",
+   "floor": "1F",
+   "kind": "stairs",
+   "group": "CB-SL",
+   "rect": [
+    191,
+    231,
+    219,
+    259
+   ],
+   "at": [
+    205,
+    245
+   ],
+   "door": [
+    233,
+    210
+   ],
+   "via": "CB-YAH",
+   "en": "Lobby stairs to the 2nd floor",
+   "hi": "दूसरी मंज़िल की लॉबी सीढ़ियाँ",
+   "enS": "Lobby stairs",
+   "hiS": "लॉबी सीढ़ियाँ"
+  },
+  {
+   "id": "CB-SR",
+   "floor": "1F",
+   "kind": "stairs",
+   "group": "CB-SR",
+   "rect": [
+    581,
+    234,
+    609,
+    262
+   ],
+   "at": [
+    595,
+    248
+   ],
+   "door": [
+    575,
+    246
+   ],
+   "via": "CB-R3",
+   "en": "Stairs in the right foyer",
+   "hi": "दाएँ फ़ोयर की सीढ़ियाँ",
+   "enS": "Foyer stairs",
+   "hiS": "फ़ोयर सीढ़ियाँ"
+  },
+  {
+   "id": "CB-S2",
+   "floor": "1F",
+   "kind": "stairs",
+   "group": "CB-S2",
+   "rect": [
+    694,
+    401,
+    722,
+    429
+   ],
+   "at": [
+    708,
+    415
+   ],
+   "door": [
+    665,
+    390
+   ],
+   "via": "CB-R5",
+   "en": "Stair S-2 · emergency exit",
+   "hi": "सीढ़ी S-2 · आपातकालीन निकास",
+   "enS": "Stair S-2",
+   "hiS": "सीढ़ी S-2"
+  }
+ ],
+ "points": [
+  {
+   "id": "CB-G0",
+   "floor": "1F",
+   "x": 228,
+   "y": 86
+  },
+  {
+   "id": "CB-T0",
+   "floor": "1F",
+   "x": 260,
+   "y": 90
+  },
+  {
+   "id": "CB-T1",
+   "floor": "1F",
+   "x": 300,
+   "y": 105
+  },
+  {
+   "id": "CB-T2",
+   "floor": "1F",
+   "x": 350,
+   "y": 118
+  },
+  {
+   "id": "CB-T3",
+   "floor": "1F",
+   "x": 395,
+   "y": 125
+  },
+  {
+   "id": "CB-T4",
+   "floor": "1F",
+   "x": 440,
+   "y": 121
+  },
+  {
+   "id": "CB-T5",
+   "floor": "1F",
+   "x": 475,
+   "y": 113
+  },
+  {
+   "id": "CB-T6",
+   "floor": "1F",
+   "x": 500,
+   "y": 120
+  },
+  {
+   "id": "CB-D1",
+   "floor": "1F",
+   "x": 280,
+   "y": 143
+  },
+  {
+   "id": "CB-LOB",
+   "floor": "1F",
+   "x": 250,
+   "y": 175
+  },
+  {
+   "id": "CB-YAH",
+   "floor": "1F",
+   "x": 273,
+   "y": 203
+  },
+  {
+   "id": "CB-L2",
+   "floor": "1F",
+   "x": 255,
+   "y": 240
+  },
+  {
+   "id": "CB-L3",
+   "floor": "1F",
+   "x": 231,
+   "y": 300
+  },
+  {
+   "id": "CB-L4",
+   "floor": "1F",
+   "x": 208,
+   "y": 360
+  },
+  {
+   "id": "CB-LL",
+   "floor": "1F",
+   "x": 165,
+   "y": 375
+  },
+  {
+   "id": "CB-B0",
+   "floor": "1F",
+   "x": 225,
+   "y": 379
+  },
+  {
+   "id": "CB-B1",
+   "floor": "1F",
+   "x": 280,
+   "y": 388
+  },
+  {
+   "id": "CB-B2",
+   "floor": "1F",
+   "x": 340,
+   "y": 398
+  },
+  {
+   "id": "CB-B3",
+   "floor": "1F",
+   "x": 407,
+   "y": 400
+  },
+  {
+   "id": "CB-B4",
+   "floor": "1F",
+   "x": 475,
+   "y": 396
+  },
+  {
+   "id": "CB-B45",
+   "floor": "1F",
+   "x": 520,
+   "y": 387
+  },
+  {
+   "id": "CB-B5",
+   "floor": "1F",
+   "x": 555,
+   "y": 380
+  },
+  {
+   "id": "CB-B6",
+   "floor": "1F",
+   "x": 590,
+   "y": 371
+  },
+  {
+   "id": "CB-R5",
+   "floor": "1F",
+   "x": 625,
+   "y": 363
+  },
+  {
+   "id": "CB-R4",
+   "floor": "1F",
+   "x": 595,
+   "y": 300
+  },
+  {
+   "id": "CB-R3",
+   "floor": "1F",
+   "x": 563,
+   "y": 240
+  },
+  {
+   "id": "CB-R2",
+   "floor": "1F",
+   "x": 540,
+   "y": 193
+  },
+  {
+   "id": "CB-R1",
+   "floor": "1F",
+   "x": 520,
+   "y": 150
+  }
+ ],
+ "walks": [
+  [
+   "CB-G0",
+   "CB-T0"
+  ],
+  [
+   "CB-T0",
+   "CB-T1"
+  ],
+  [
+   "CB-T1",
+   "CB-T2"
+  ],
+  [
+   "CB-T2",
+   "CB-T3"
+  ],
+  [
+   "CB-T3",
+   "CB-T4"
+  ],
+  [
+   "CB-T4",
+   "CB-T5"
+  ],
+  [
+   "CB-T5",
+   "CB-T6"
+  ],
+  [
+   "CB-T6",
+   "CB-R1"
+  ],
+  [
+   "CB-T0",
+   "CB-D1"
+  ],
+  [
+   "CB-T1",
+   "CB-D1"
+  ],
+  [
+   "CB-D1",
+   "CB-LOB"
+  ],
+  [
+   "CB-LOB",
+   "CB-YAH"
+  ],
+  [
+   "CB-D1",
+   "CB-YAH"
+  ],
+  [
+   "CB-YAH",
+   "CB-L2"
+  ],
+  [
+   "CB-L2",
+   "CB-L3"
+  ],
+  [
+   "CB-L3",
+   "CB-L4"
+  ],
+  [
+   "CB-L4",
+   "CB-LL"
+  ],
+  [
+   "CB-L4",
+   "CB-B0"
+  ],
+  [
+   "CB-B0",
+   "CB-B1"
+  ],
+  [
+   "CB-B1",
+   "CB-B2"
+  ],
+  [
+   "CB-B2",
+   "CB-B3"
+  ],
+  [
+   "CB-B3",
+   "CB-B4"
+  ],
+  [
+   "CB-B4",
+   "CB-B45"
+  ],
+  [
+   "CB-B45",
+   "CB-B5"
+  ],
+  [
+   "CB-B5",
+   "CB-B6"
+  ],
+  [
+   "CB-B6",
+   "CB-R5"
+  ],
+  [
+   "CB-R5",
+   "CB-R4"
+  ],
+  [
+   "CB-R4",
+   "CB-R3"
+  ],
+  [
+   "CB-R3",
+   "CB-R2"
+  ],
+  [
+   "CB-R2",
+   "CB-R1"
+  ]
+ ],
+ "landmarks": {
+  "CB-YAH": {
+   "en": "the fire-plan board",
+   "hi": "अग्नि निकासी नक्शे वाले बोर्ड"
+  },
+  "CB-LOB": {
+   "en": "the registration lobby",
+   "hi": "रजिस्ट्रेशन लॉबी"
+  },
+  "CB-D1": {
+   "en": "the doors to the backstage corridor",
+   "hi": "बैकस्टेज गलियारे के दरवाज़ों"
+  },
+  "CB-L2": {
+   "en": "the Audi Foyer",
+   "hi": "ऑडी फ़ोयर"
+  },
+  "CB-L3": {
+   "en": "the Audi Foyer",
+   "hi": "ऑडी फ़ोयर"
+  },
+  "CB-L4": {
+   "en": "the end of the Audi Foyer",
+   "hi": "ऑडी फ़ोयर के आख़िर"
+  },
+  "CB-LL": {
+   "en": "the Lift L-1 lobby",
+   "hi": "लिफ्ट L-1 लॉबी"
+  },
+  "CB-T3": {
+   "en": "the corridor behind the stage",
+   "hi": "स्टेज के पीछे वाले गलियारे"
+  },
+  "CB-B3": {
+   "en": "the seminar room corridor",
+   "hi": "सेमिनार रूम वाले गलियारे"
+  },
+  "CB-R5": {
+   "en": "the corridor end, by the TOILET sign",
+   "hi": "गलियारे के आख़िर, TOILET बोर्ड"
+  },
+  "CB-R3": {
+   "en": "the right Audi Foyer",
+   "hi": "दाएँ ऑडी फ़ोयर"
+  }
+ },
+ "photos": {
+  "CB-PLAZA": "photos/cb-plaza.jpg",
+  "CB-G0": "photos/cb-plaza.jpg",
+  "CB-YAH": "photos/cb-yah.jpg",
+  "CB-REG": "photos/cb-reg.jpg",
+  "CB-LOB": "photos/cb-reg.jpg",
+  "CB-SL": "photos/cb-sl.jpg",
+  "CB-AUDI": "photos/cb-audi.jpg",
+  "CB-L2": "photos/cb-audi.jpg",
+  "CB-STAGE": "photos/cb-stage.jpg",
+  "CB-L1": "photos/cb-l1.jpg",
+  "CB-LL": "photos/cb-l1.jpg",
+  "CB-B0": "photos/cb-b0.jpg",
+  "CB-B1": "photos/cb-b0.jpg",
+  "CB-101": "photos/cb-b0.jpg",
+  "CB-B2": "photos/cb-b0.jpg",
+  "CB-B3": "photos/cb-b3.jpg",
+  "CB-B4": "photos/cb-b3.jpg",
+  "CB-B45": "photos/cb-b3.jpg",
+  "CB-SRC": "photos/cb-src.jpg",
+  "CB-SRE": "photos/cb-src.jpg",
+  "CB-B5": "photos/cb-b5.jpg",
+  "CB-B6": "photos/cb-b5.jpg",
+  "CB-R5": "photos/cb-b5.jpg",
+  "CB-WC": "photos/cb-wc.jpg",
+  "CB-D1": "photos/cb-d1.jpg",
+  "CB-T0": "photos/cb-t0.jpg",
+  "CB-T1": "photos/cb-t3.jpg",
+  "CB-T2": "photos/cb-t3.jpg",
+  "CB-T3": "photos/cb-t3.jpg",
+  "CB-T4": "photos/cb-t3.jpg",
+  "CB-T5": "photos/cb-t3.jpg",
+  "CB-FGR": "photos/cb-fgr.jpg",
+  "CB-L3": "photos/cb-l4.jpg",
+  "CB-L4": "photos/cb-l4.jpg"
+ },
+ "defaults": {
+  "start": "CB-PLAZA",
+  "dest": "CB-AUDI"
+ },
+ "quick": [
+  "CB-AUDI",
+  "CB-REG",
+  "WC",
+  "CB-STAGE",
+  "CB-101",
+  "CB-SRC"
+ ],
+ "popular": [
+  "CB-AUDI",
+  "CB-STAGE",
+  "CB-REG",
+  "CB-WC",
+  "CB-101",
+  "CB-SRC",
+  "CB-SRE",
+  "CB-FGR",
+  "CB-MGR"
+ ],
+ "cats": [
+  "hall",
+  "learn",
+  "service"
+ ],
+ "askPh": {
+  "en": "Try: auditorium, stage, washroom kahan hai",
+  "hi": "जैसे: सभागार, स्टेज, शौचालय कहाँ है"
+ },
+ "notice": {
+  "en": "First floor, traced from the fire evacuation plan on the wall and our walk-through on 9 Oct 2026. Sizes are approximate. Ground and second floors are not mapped yet. Hackathon prototype, not an official SSRGSP app.",
+  "hi": "पहली मंज़िल, दीवार पर लगे अग्नि निकासी नक्शे और 9 अक्टूबर 2026 की हमारी वॉक-थ्रू से बनाई गई। नाप लगभग हैं। भूतल और दूसरी मंज़िल अभी नहीं जोड़ी गई हैं। हैकाथॉन प्रोटोटाइप, SSRGSP का आधिकारिक ऐप नहीं।"
+ },
+ "help": {
+  "desk": "CB-REG",
+  "deskT": {
+   "en": "Registration desk",
+   "hi": "रजिस्ट्रेशन डेस्क"
+  },
+  "deskD": {
+   "en": "In the lobby next to the stairs to the 2nd floor. On event days the organisers and volunteers sit here.",
+   "hi": "दूसरी मंज़िल की सीढ़ियों के पास वाली लॉबी में। इवेंट के दिन आयोजक और वॉलंटियर यहीं बैठते हैं।"
+  }
+ },
+ "about": {
+  "en": [
+   "This floor map was made from one phone photo of the fire evacuation plan on the first-floor wall. Claude straightened the photo, traced the rooms, foyers, lifts and stairs, and turned them into a walking graph.",
+   "An 8-minute walk-through video and a few photos placed the registration desk, the toilets and room numbers like CB-101. Those photos show up in the step-by-step directions.",
+   "No beacons and no CAD drawings were needed: every public building already has this plan on its wall. That is how a building can be mapped in a day."
+  ],
+  "hi": [
+   "यह नक्शा पहली मंज़िल की दीवार पर लगे अग्नि निकासी नक्शे की एक फ़ोन फ़ोटो से बना है। Claude ने फ़ोटो सीधी की, कमरे, फ़ोयर, लिफ्ट और सीढ़ियाँ बनाईं, और उन्हें चलने के रास्तों में बदला।",
+   "8 मिनट के वीडियो और कुछ फ़ोटो से रजिस्ट्रेशन डेस्क, शौचालय और CB-101 जैसे कमरे जोड़े गए। यही फ़ोटो रास्ते के हर कदम में दिखती हैं।",
+   "न बीकन चाहिए, न CAD नक्शे: हर सरकारी इमारत की दीवार पर यह नक्शा पहले से लगा होता है। इसीलिए एक इमारत एक दिन में मैप हो सकती है।"
+  ]
+ },
+ "aiRules": "- This is the first floor of the Convention Building at Global Skills Park, Bhopal, where hackathons and events are held.\n- The event, the hackathon, presentations, the Impact Lab, the ceremony, \"main hall\" or the auditorium means CB-AUDI (Sandipani Sabhagar).\n- A team that is going to present, backstage, mic check or the stage means CB-STAGE.\n- Registration, help, ID cards, badges, kits or volunteers means CB-REG.\n- Toilets, washrooms or bathrooms mean CB-WC.\n- Jury, judges or the jury room means CB-101; say in the reply that the \"Jury Seat\" sign was on CB-101 on 9 October and may change.\n- Food, chai, lunch or the food court: the food court is downstairs (the sign at Lift L-1 points down). Set destination_id to null and say to take Lift L-1 down to the food court.\n- Leaving, going outside, parking or the campus means CB-PLAZA."
+}

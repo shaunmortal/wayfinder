@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+    <title>Raasta · रास्ता</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Hind:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap"
+    />
+  </head>
+  <body>
+    <div class="app" id="app">
+      <aside class="side" aria-label="Main menu">
+        <div class="brand" id="sideBrand"></div>
+        <ul class="navlist" id="sideNav"></ul>
+        <div class="side-card" id="sideCard"></div>
+        <button class="langbtn" data-act="lang" id="sideLang" type="button"></button>
+      </aside>
+      <header class="topbar">
+        <div class="brand" id="topBrand"></div>
+        <button class="langbtn" data-act="lang" id="topLang" type="button"></button>
+      </header>
+      <section class="panel head" id="head"></section>
+      <section class="mapwrap" id="mapwrap">
+        <div class="floortabs" id="ftabs" role="group"></div>
+        <svg id="map" preserveAspectRatio="xMidYMid meet" role="img">
+          <g id="floors"></g>
+          <g id="routeLayer"></g>
+          <g id="markLayer"></g>
+        </svg>
+        <div class="v3" id="view3d" hidden>
+          <div class="v3labels" id="v3labels" aria-hidden="true"></div>
+          <div class="v3msg" id="v3msg" hidden></div>
+          <div class="v3hint" id="v3hint"></div>
+        </div>
+        <div class="mapctl">
+          <div class="viewsw" id="viewsw" role="group"></div>
+          <button class="mctl" type="button" data-act="zin" id="zin"></button>
+          <button class="mctl" type="button" data-act="zout" id="zout"></button>
+          <button class="mctl" type="button" data-act="zfit" id="zfit"></button>
+        </div>
+        <div class="legend" id="legend"></div>
+      </section>
+      <section class="panel body" id="body"></section>
+      <nav class="tabbar" id="tabbar" aria-label="Main menu"></nav>
+    </div>
+    <input type="file" id="photoIn" accept="image/jpeg,image/png,image/webp" hidden />
+    <input type="file" id="slipIn" accept="image/jpeg,image/png,image/webp" hidden />
+    <div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>

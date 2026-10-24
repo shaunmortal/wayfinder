@@ -1,0 +1,504 @@
+<!doctype html>
+<html lang="hi">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Raasta · Tech Stack & Q&A</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Hind:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500&display=swap"
+    />
+    <style>
+      :root {
+        --bg: #ecf0f6;
+        --surface: #ffffff;
+        --surface-2: #f3f6fb;
+        --ink: #0f1b2d;
+        --ink-2: #46566c;
+        --line: #d8e0eb;
+        --nav: #0e2645;
+        --nav-ink: #e4ecf8;
+        --primary: #1557e6;
+        --primary-soft: #e3ebfd;
+        --primary-ink: #0e45bf;
+        --ok: #11734f;
+        --ok-soft: #dff3ea;
+        --warn: #9a5b00;
+        --warn-soft: #fdf0dc;
+      }
+      @media (prefers-color-scheme: dark) {
+        :root:not([data-theme='light']) {
+          --bg: #0a111d;
+          --surface: #111b2b;
+          --surface-2: #172438;
+          --ink: #e6edf7;
+          --ink-2: #9eafc6;
+          --line: #24344c;
+          --nav: #07101e;
+          --nav-ink: #e4ecf8;
+          --primary: #2f66e6;
+          --primary-soft: #172a4f;
+          --primary-ink: #a9c3ff;
+          --ok: #5fd3a4;
+          --ok-soft: #12352a;
+          --warn: #f2b45c;
+          --warn-soft: #3a2a12;
+        }
+      }
+      * {
+        box-sizing: border-box;
+      }
+      body {
+        margin: 0;
+        background: var(--bg);
+        color: var(--ink);
+        font:
+          16px/1.6 Hind,
+          'Noto Sans Devanagari',
+          system-ui,
+          sans-serif;
+      }
+      header {
+        background: var(--nav);
+        color: var(--nav-ink);
+        padding: 28px 16px 24px;
+      }
+      .wrap {
+        max-width: 980px;
+        margin: 0 auto;
+        padding: 0 16px;
+      }
+      header .wrap {
+        padding: 0;
+      }
+      h1 {
+        margin: 0;
+        font-size: 30px;
+        line-height: 1.2;
+      }
+      header p {
+        margin: 6px 0 0;
+        color: #a9bcd8;
+      }
+      nav.toc {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        margin-top: 16px;
+      }
+      nav.toc a {
+        color: var(--nav-ink);
+        text-decoration: none;
+        border: 1px solid #2b4c78;
+        border-radius: 999px;
+        padding: 4px 12px;
+        font-size: 14px;
+      }
+      nav.toc a:hover {
+        background: #173761;
+      }
+      main {
+        padding: 24px 0 48px;
+      }
+      section {
+        background: var(--surface);
+        border: 1px solid var(--line);
+        border-radius: 16px;
+        padding: 20px;
+        margin-bottom: 20px;
+      }
+      h2 {
+        margin: 0 0 12px;
+        font-size: 22px;
+      }
+      .table {
+        overflow-x: auto;
+      }
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 15px;
+      }
+      th,
+      td {
+        text-align: left;
+        vertical-align: top;
+        padding: 10px 12px;
+        border-bottom: 1px solid var(--line);
+      }
+      th {
+        color: var(--ink-2);
+        font-weight: 600;
+        font-size: 13px;
+        text-transform: uppercase;
+        letter-spacing: 0.05em;
+        background: var(--surface-2);
+      }
+      td:first-child {
+        font-weight: 600;
+        white-space: nowrap;
+      }
+      code {
+        font-family: 'IBM Plex Mono', ui-monospace, monospace;
+        font-size: 13.5px;
+        background: var(--surface-2);
+        border: 1px solid var(--line);
+        border-radius: 6px;
+        padding: 0 5px;
+      }
+      details {
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        margin-bottom: 10px;
+        background: var(--surface);
+      }
+      details[open] {
+        background: var(--surface-2);
+      }
+      summary {
+        cursor: pointer;
+        padding: 12px 16px;
+        font-weight: 600;
+        list-style: none;
+        display: flex;
+        gap: 10px;
+        align-items: baseline;
+      }
+      summary::-webkit-details-marker {
+        display: none;
+      }
+      summary .n {
+        flex: none;
+        min-width: 28px;
+        height: 28px;
+        border-radius: 8px;
+        background: var(--primary-soft);
+        color: var(--primary-ink);
+        display: grid;
+        place-items: center;
+        font-size: 14px;
+      }
+      details > div {
+        padding: 0 16px 14px 54px;
+      }
+      details p,
+      details ul {
+        margin: 6px 0;
+      }
+      .tag {
+        display: inline-block;
+        font-size: 12.5px;
+        font-weight: 600;
+        border-radius: 999px;
+        padding: 1px 9px;
+        margin-left: 4px;
+      }
+      .tag.ok {
+        background: var(--ok-soft);
+        color: var(--ok);
+      }
+      .tag.no {
+        background: var(--warn-soft);
+        color: var(--warn);
+      }
+      .tools {
+        display: flex;
+        gap: 8px;
+        margin-bottom: 12px;
+        flex-wrap: wrap;
+      }
+      button {
+        font: inherit;
+        font-size: 14px;
+        border: 1px solid var(--line);
+        background: var(--surface);
+        color: var(--ink);
+        border-radius: 10px;
+        padding: 6px 12px;
+        cursor: pointer;
+      }
+      button:hover {
+        background: var(--surface-2);
+      }
+      .stat {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 10px;
+        margin-top: 4px;
+      }
+      .stat div {
+        background: var(--surface-2);
+        border: 1px solid var(--line);
+        border-radius: 12px;
+        padding: 10px 12px;
+      }
+      .stat b {
+        display: block;
+        font-size: 22px;
+        color: var(--primary-ink);
+      }
+      .stat span {
+        font-size: 13.5px;
+        color: var(--ink-2);
+      }
+      footer {
+        color: var(--ink-2);
+        font-size: 14px;
+        text-align: center;
+        padding-bottom: 32px;
+      }
+      @media (max-width: 600px) {
+        h1 {
+          font-size: 24px;
+        }
+        details > div {
+          padding-left: 16px;
+        }
+        td:first-child {
+          white-space: normal;
+        }
+      }
+      @media print {
+        header {
+          background: none;
+          color: var(--ink);
+        }
+        nav.toc,
+        .tools {
+          display: none;
+        }
+        details {
+          break-inside: avoid;
+        }
+        details > div {
+          display: block;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="wrap">
+        <h1>Raasta · रास्ता: Tech Stack aur Technical Q&amp;A</h1>
+        <p>Hospitals aur sarkari buildings ke andar navigation. Impact Lab, Bhopal.</p>
+        <nav class="toc">
+          <a href="#numbers">Numbers</a><a href="#stack">Tech stack</a><a href="#qa">Sawal-jawab</a><a href="#notyet">Bana / abhi nahi</a>
+        </nav>
+      </div>
+    </header>
+    <main class="wrap">
+      <section id="numbers">
+        <h2>Ek nazar mein</h2>
+        <div class="stat">
+          <div><b>1</b><span>building: demo hospital (4 floors, ~190 rooms)</span></div>
+          <div><b>191</b><span>kamre (hospital: 4 block, 4 floor, 46–49 kamre har floor)</span></div>
+          <div><b>~480</b><span>nodes hospital ke graph mein</span></div>
+          <div><b>44,838</b><span>jagah → jagah raaste, sab bina AI/internet ke test kiye</span></div>
+          <div><b>78</b><span>automated tests</span></div>
+          <div><b>~70 KB</b><span>pehla download (3D baad mein, ~630 KB)</span></div>
+          <div><b>2 bhasha</b><span>Hindi + English, likhkar aur bolkar</span></div>
+        </div>
+      </section>
+
+      <section id="stack">
+        <h2>Tech stack</h2>
+        <div class="table">
+          <table>
+            <thead>
+              <tr><th>Hissa</th><th>Kya use kiya</th><th>Kyun</th></tr>
+            </thead>
+            <tbody>
+              <tr><td>Frontend</td><td>Vite 8 + TypeScript (strict), koi UI framework nahi (seedha DOM + SVG)</td><td>Pehla download ~70 KB; sasta phone bhi jaldi khol leta hai</td></tr>
+              <tr><td>2D map</td><td>SVG, apna 2.5D projection</td><td>Har floor saaf, drag/pinch zoom</td></tr>
+              <tr><td>3D / Real 3D</td><td>Three.js 0.186: OrbitControls (phone pe ek ungli se khiskana), InstancedMesh, shadows, render target</td><td>Zarurat padne par hi load (~630 KB)</td></tr>
+              <tr><td>Real 3D textures</td><td>Canvas pe code se bane: tiles, paint, ghaas, sadak, facade, room ke board (ek atlas)</td><td>Koi image file nahi, license ka jhanjhat nahi</td></tr>
+              <tr><td>Rasta nikalna</td><td>Apna graph + Dijkstra (TypeScript), phone ke browser mein; band lift/corridor aur bheed ka cost bhi</td><td>Internet ke bina bhi rasta</td></tr>
+              <tr><td>Offline samajh</td><td>Keyword search + "kahan hoon / kahan jaana" parser (Hindi, Hinglish, English, Devanagari ank)</td><td>AI fail ho tab bhi chalta hai</td></tr>
+              <tr><td>Bhasha</td><td>Hindi + English, saare UI strings <code>i18n</code> mein; AI jawab dono bhashaon mein save</td><td>Bhasha badlo to jawab bhi badle</td></tr>
+              <tr><td>Awaaz</td><td>Web Speech API: mic (hi-IN, Hinglish samajhta hai) aur bolkar sunana (sabse natural awaaz apne aap)</td><td>Koi extra library nahi</td></tr>
+              <tr><td>AI</td><td>AI API. Text ke liye tez model; sign aur parchi ki photo ke liye vision model. Tay format ka JSON (zod schema)</td><td>Hinglish samajhta hai, photo padhta hai, jawab har baar fixed format mein</td></tr>
+              <tr><td>Server</td><td><code>api/</code> mein serverless functions (Vercel style): <code>ask</code>, <code>locate</code>, <code>slip</code>, <code>queue</code> (live bheed), <code>status</code></td><td>API key sirf server pe</td></tr>
+              <tr><td>Offline app</td><td>Service worker: app, teeno buildings ka data aur saari photos pehli baar mein save</td><td>Network band karke reload pe bhi chalta hai</td></tr>
+              <tr><td>Building ka data</td><td>Har building ki ek <code>site.json</code> (8 unit = 1 metre); hospital <code>gen_hospital.py</code> se; bheed ke ghante bhi data mein</td><td>Nayi building = sirf data, code nahi</td></tr>
+              <tr><td>Tools</td><td>Python + OpenCV (fire-plan se lines), segno (QR cards), Chrome se PDF</td><td></td></tr>
+              <tr><td>Testing</td><td>Vitest: 78 tests; strict <code>tsc</code> + Prettier; headless Chrome se end-to-end (asli AI ke saath)</td><td></td></tr>
+              <tr><td>Hosting</td><td>Vercel (plan), demo ke liye Cloudflare Tunnel</td><td></td></tr>
+              <tr><td>Banaya kaise</td><td>AI coding assistant se, milestone dar milestone</td><td></td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <section id="qa">
+        <h2>Judges ke technical sawal</h2>
+        <div class="tools"><button type="button" id="openAll">Sab kholo</button><button type="button" id="closeAll">Sab band karo</button></div>
+
+        <details><summary><span class="n">1</span>GPS ya beacon ke bina user kahan khada hai, ye kaise pata chalta hai?</summary><div>
+          <ul>
+            <li>Har jagah laga QR code page ko seedha usi spot pe kholta hai (<code>#spot-id</code>).</li>
+            <li>Bolkar: "Where am I" mein mic dabake "main 203 mein hoon" ya "OT ke bahar hoon".</li>
+            <li>QR na mile to paas ke board ki photo; AI padh ke jagah set karta hai.</li>
+            <li>Ya list mein se apni jagah chun lo.</li>
+          </ul>
+          <p>Lagatar tracking nahi. User har mod pe "Next" dabata hai, isliye na beacon chahiye na koi hardware.</p></div></details>
+
+        <details><summary><span class="n">2</span>Dijkstra kyun, A* kyun nahi?</summary><div>
+          <p>Hospital ka graph chhota hai: ~480 nodes (250 corridor points, 194 kamre, 36 lift/seedhi). Itne chhote graph pe Dijkstra turant jawab deta hai aur sabse chhota rasta pakka deta hai. A* se yahan koi khaas fayda nahi; shehar jitne bade graph pe heap ya A* lagana aasaan hai.</p></div></details>
+
+        <details><summary><span class="n">3</span>Kai floor aur lift kaise handle hote hain?</summary><div>
+          <ul>
+            <li>Lift aur seedhi graph mein "core" hain; alag floor ke same core aapas mein jude hote hain.</li>
+            <li>Lift ka cost 3 per floor (plus pahunchne ka 10); seedhi ka 25 per floor.</li>
+            <li>"Step-free" chuno to seedhi hat jaati hai; "Lift not working" chuno to lift.</li>
+          </ul></div></details>
+
+        <details><summary><span class="n">4</span>Aap kahan khade ho, uske hisaab se alag rasta kaise aata hai?</summary><div>
+          <p>Corridor ek ghere (ring) mein hain, beech mein garden walkway aur skywalk, isliye ek jagah ke 2–3 raaste bante hain. Nephrology OPD tak:</p>
+          <ul><li>Gate 3 se: garden ke raaste <b>132 m</b></li><li>Gate 1 se: west corridor se <b>162 m</b></li><li>Gate 2 se: <b>28 m</b></li></ul>
+          <p>Is baat ka test bhi likha hua hai.</p></div></details>
+
+        <details><summary><span class="n">5</span>Fire evacuation plan ki photo se map kaise banta hai?</summary><div>
+          <ol>
+            <li>Photo ko seedha kiya jaata hai, uspe grid aur lines banti hain (Python + OpenCV).</li>
+            <li>Kamron aur corridor ko trace karke <code>site.json</code> mein daala jaata hai.</li>
+            <li>Tests check karte hain ki har kamra pahuncha ja sake aur har photo maujood ho.</li>
+          </ol>
+          <p>Convention Building ka map isi tarah ek photo se bana. Ye abhi aadha manual hai <span class="tag no">app ke andar: abhi nahi</span></p></div></details>
+
+        <details><summary><span class="n">6</span>AI galat jawab de ya kuch bana de to?</summary><div>
+          <ul>
+            <li>Jawab ek tay JSON format mein hi aata hai.</li>
+            <li>AI jo room id de, server check karta hai ki wo building mein hai; galat id null ho jaati hai.</li>
+            <li>AI ko rasta (lift, upar/neeche, mod) batane se mana kiya hai; wo sirf jagah aur floor batata hai. Asli rasta engine nikaalta hai.</li>
+            <li>Koi bhi error ya time-out ho to app apni offline samajh pe chala jaata hai.</li>
+            <li>Hospital ke rules (<code>aiRules</code>) data mein, jaise "blood chahiye" = Blood Bank 101.</li>
+          </ul></div></details>
+
+        <details><summary><span class="n">7</span>Internet ya AI na ho to?</summary><div>
+          <ul>
+            <li>Rasta, search, "kahan hoon / kahan jaana", 2D/3D map, awaaz aur bheed ka andaza sab phone pe chalte hain.</li>
+            <li>Test: teeno buildings mein har jagah se har jagah ke <b>44,838</b> raaste, aur har kamra apne Hindi/English naam aur number se, bina AI ke.</li>
+            <li>Service worker pehli baar mein app, data aur photos save karta hai; network band karke reload kiya, app chala aur rasta bana.</li>
+            <li>Help page pe <b>"Offline demo"</b> switch AI aur live counter band karke ye dikhata hai; search box ke paas "AI / Offline" ka nishaan.</li>
+          </ul></div></details>
+
+        <details><summary><span class="n">8</span>Ek hi vaakya mein "kahan hoon" aur "kahan jaana hai"?</summary><div>
+          <p>"Main 301 mein hoon aur mujhe 202 jana hai", "301 se 202", "papa ICU mein hain unse milna hai": AI dono jagah samajhta hai. Bina AI ke offline parser bhi "hoon / jaana hai / se / from…to" aur Devanagari ank (३०१) samajhta hai. Sirf jagah batayi to pehle chuni manzil rehti hai aur rasta nayi jagah se ban jaata hai.</p></div></details>
+
+        <details><summary><span class="n">9</span>Parchi (OPD slip) ki photo se rasta?</summary><div>
+          <p>Search box mein 📄 button: parchi ki photo do, AI department / room / jaanch padhta hai aur rasta shuru. Test: 4 sample parchiyan (English, poori Hindi, X-ray jaanch, haath se likha "Paediatrics G-05"), chaaron sahi kamre pe gayi. AI ko mareez ka naam, umar, phone, registration number lautane se mana kiya hai; photo save nahi hoti.</p></div></details>
+
+        <details><summary><span class="n">10</span>Bheed ho to doosra rasta? Bina internet ke bhi?</summary><div>
+          <p>Bina internet, Wi-Fi ya Bluetooth ke koi phone ye nahi jaan sakta ki <i>abhi</i> kisi corridor mein kitne log hain. Isliye:</p>
+          <ul>
+            <li><b>Offline, samay se andaza:</b> hospital ke aam bheed wale ghante data mein (registration subah 8–1, billing 10–4, ward visiting shaam 4–7). Us waqt wo corridor "lamba" maana jaata hai.</li>
+            <li><b>Offline, logon ko baantna:</b> do raaste lagbhag barabar hon to har phone apne fixed random number se ek chunta hai; aadhe ek raaste, aadhe doosre.</li>
+            <li><b>Online, live count:</b> "Start navigation" pe us raaste ke har corridor point pe +1, "I have arrived"/End pe −1, button na dabaye to apne aap expire. Kisi point pe 10+ log = agle bande ko doosra rasta. 2.5 second mein jawab na aaye to offline andaza. Sirf random trip id + corridor points, koi personal data nahi.</li>
+          </ul>
+          <p>Bluetooth phone-to-phone ginti website mein sambhav nahi (native app chahiye). Count abhi server ki memory mein hai; kai-server deploy pe Redis lagega <span class="tag no">Redis: abhi nahi</span></p></div></details>
+
+        <details><summary><span class="n">11</span>Chalte waqt lift kharab ho ya rasta band ho to?</summary><div>
+          <p>Navigation screen pe "रास्ते में दिक्कत?": mic se bolo ("लिफ्ट खराब है", "aage rasta band hai", "seedhi nahi chadh sakta") ya button dabao. Wahi lift (saare floors) ya wo corridor band maan kar <b>jahan aap abhi ho wahin se</b> naya rasta, navigation chalu rehta hai, aur app bolkar batata hai. Offline chalta hai. Test: 203 → 304 Lift A se tha; "लिफ्ट खराब है" pe Stairs 5 se 50 m ka naya rasta, phir "rasta band" pe Stairs 2 se 190 m.</p></div></details>
+
+        <details><summary><span class="n">12</span>Awaaz aur bhasha kaise kaam karti hai?</summary><div>
+          <ul>
+            <li>Mic hamesha hi-IN sunta hai: Hindi, Hinglish aur Indian English teeno; bolte waqt shabd box mein dikhte hain.</li>
+            <li>Bolkar poocha to AI bolkar jawab deta hai, aam bol-chaal mein ("घबराइए नहीं, ब्लड बैंक पहली मंज़िल पर है…").</li>
+            <li>Sabse natural (neural) awaaz apne aap chuni jaati hai (jaise Google हिन्दी, Microsoft Swara); "आवाज़ बदलें" se doosri.</li>
+            <li>Hindi/English badlo to AI ka jawab aur bolne ki bhasha dono badal jaate hain. Phone mein Hindi awaaz na ho to English mein padhta hai aur batata hai.</li>
+          </ul></div></details>
+
+        <details><summary><span class="n">13</span>Navigation mein dikhne wali tasveer kahan se aati hai?</summary><div>
+          <ul>
+            <li>Jahan asli photo hai (Campus, Convention Building; chehre blur), wahan wahi.</li>
+            <li>Baaki jagah usi map se us mod ka first-person Real 3D view: corridor, darwazon pe room ke board, zameen pe neeli patti.</li>
+            <li>Isliye hamesha sahi aur route ke sync mein. Koi nakli ya internet se li hui photo nahi.</li>
+          </ul></div></details>
+
+        <details><summary><span class="n">14</span>3D aur Real 3D mein kya farak hai?</summary><div>
+          <p>Map pe 2D / 3D / Real buttons. 3D saaf overview hai. Real 3D mein painted diwarein, tiles, har kamre pe darwaza aur board, seedhiyan, lift ke darwaze, imaraton pe khidkiyan, ped, aasmaan aur chhaya. Real 3D mein kamre pe tap karo to uske darwaze ke saamne khade hone jaisa view. Phone pe chhaya band rehti hai taaki tez chale.</p></div></details>
+
+        <details><summary><span class="n">15</span>Kharcha kitna?</summary><div>
+          <p>Andaza, AI ke current rates pe:</p>
+          <ul>
+            <li><b>Text sawal (Haiku 5.5):</b> ~₹0.03–0.10 per sawal.</li>
+            <li><b>Sign ya parchi ki photo (Sonnet 5.5):</b> ~₹0.5–1 per photo.</li>
+            <li>Rasta, offline search, bheed ka andaza aur 3D ka koi kharcha nahi; sab phone pe.</li>
+          </ul></div></details>
+
+        <details><summary><span class="n">16</span>Privacy?</summary><div>
+          <ul>
+            <li>Na login, na tracking, na kisi ko pehchaanne wala data.</li>
+            <li>API key sirf server pe; sawal aur photo store nahi hote.</li>
+            <li>Parchi se sirf department/room lautaya jaata hai, mareez ki details nahi.</li>
+            <li>Live bheed counter: sirf random trip id aur corridor points.</li>
+            <li>Walk-through photos mein chehre blur, location (EXIF/GPS) data hataya.</li>
+            <li>Mic browser ki speech service use karta hai; type karna hamesha chalta hai.</li>
+          </ul></div></details>
+
+        <details><summary><span class="n">17</span>Security?</summary><div>
+          <ul>
+            <li>Har IP ke liye rate limit (text 20/minute, photo 8/minute, live counter 30/minute).</li>
+            <li>Input ki jaanch: site id, image ka type, 4 MB limit, sirf asli corridor ids gine jaate hain.</li>
+            <li>Page pe dikhne wala har text escape hota hai, taaki HTML inject na ho.</li>
+            <li>"Nakli 10 log" demo button sirf <code>RAASTA_DEMO=1</code> wale server pe chalta hai, public pe nahi.</li>
+            <li>CSP header aur kai server instance ke beech shared rate limit (Redis) <span class="tag no">abhi nahi</span></li>
+          </ul></div></details>
+
+        <details><summary><span class="n">18</span>AIIMS jitna bada scale kaise hoga?</summary><div>
+          <ul>
+            <li>Har building ek data file; demo hospital mein 4 block, 4 floor, 191 kamre, 4 lift, 5 seedhiyan, 3 gate.</li>
+            <li>3D mein ek jaisi cheezein instancing se, isliye 1000+ furniture bhi halka; 3D tabhi load hota hai jab zarurat ho.</li>
+            <li>Bade deployment pe: Go server + Redis (cache, rate limit, live counter) + Kafka (anonymous analytics). Abhi ki zarurat ke liye ye bhaari hai, isliye plan mein rakha hai.</li>
+          </ul></div></details>
+
+        <details><summary><span class="n">19</span>Koi framework (React wagairah) kyun nahi?</summary><div>
+          <p>Download chhota rehta hai aur sasta phone bhi jaldi khol leta hai. Prototype bhi aise hi bana tha.</p></div></details>
+
+        <details><summary><span class="n">20</span>Accessibility?</summary><div>
+          <p>Step-free (wheelchair) rasta, chalte waqt "seedhi nahi chadh sakte" bolkar rasta badalna, Hindi/English mein bolkar directions, mic se poochna, bade buttons, dark mode, phone ka alag layout.</p></div></details>
+
+        <details><summary><span class="n">21</span>Testing kaise kiya?</summary><div>
+          <ul>
+            <li>78 automated tests: routes, lift band / rasta band pe naya rasta, bheed ka andaza aur "10 log" rule, offline parser (Hindi/Hinglish/English), live counter API, parchi/sign/ask API (nakli AI ke saath).</li>
+            <li>Har jagah se har jagah (44,838 raaste) aur har kamra apne naam se, offline.</li>
+            <li>Teeno buildings dono bhashaon mein render (jsdom).</li>
+            <li>Headless Chrome mein asli AI ke saath end-to-end: likhkar, mic se, parchi upload, "Where am I"; phone screen; network band karke reload.</li>
+          </ul></div></details>
+
+        <details><summary><span class="n">22</span>Position kitni accurate hai?</summary><div>
+          <p>Utni hi jitni QR code ki jagah. App user ko lagatar track nahi karta; har mod pe photo ya 3D view aur "Next" se user khud confirm karta hai. Phone ke sensor se kadam ginna <span class="tag no">abhi nahi</span></p></div></details>
+
+        <details><summary><span class="n">23</span>Pehle se bana tha ya yahin banaya?</summary><div>
+          <p>Imaandari se bataiye kab kya bana: ek single-file prototype aur build spec pehle bane the; uske upar AI coding assistant ke saath TypeScript app, AI endpoints, bada demo hospital, 3D/Real 3D, offline mode, bheed, parchi, mic aur tests banaye. Event ke rules mein jo allowed ho, usi hisaab se bataiye.</p></div></details>
+      </section>
+
+      <section id="notyet">
+        <h2>Bana hua / abhi nahi (pooche to seedha bolna)</h2>
+        <p>
+          Bana hua:
+          <span class="tag ok">Multi-floor routing</span> <span class="tag ok">Step-free / lift band</span> <span class="tag ok">QR deep links</span>
+          <span class="tag ok">2D / 3D / Real 3D</span> <span class="tag ok">AI: Hinglish samajhna</span> <span class="tag ok">Ek vaakya mein start + manzil</span>
+          <span class="tag ok">Sign ki photo se jagah</span> <span class="tag ok">Parchi ki photo se rasta</span> <span class="tag ok">Mic (home, Where am I, navigation)</span>
+          <span class="tag ok">Natural awaaz + bhasha sync</span> <span class="tag ok">Real photos / 3D step view</span>
+          <span class="tag ok">Bheed: offline andaza + live count</span> <span class="tag ok">Rasta mein dikkat pe naya rasta</span>
+          <span class="tag ok">Poora offline (service worker)</span> <span class="tag ok">Offline demo switch</span> <span class="tag ok">QR cards (A4 PDF)</span>
+        </p>
+        <p>
+          Abhi nahi:
+          <span class="tag no">WhatsApp share</span> <span class="tag no">Patient journey checklist</span> <span class="tag no">Admin panel</span>
+          <span class="tag no">Kiosk mode</span> <span class="tag no">Analytics dashboard</span> <span class="tag no">Ek building se doosri tak ek hi route</span>
+          <span class="tag no">App ke andar "photo se map"</span> <span class="tag no">Live counter ke liye Redis</span> <span class="tag no">CSP header</span>
+          <span class="tag no">Bluetooth ginti (native app chahiye)</span>
+        </p>
+      </section>
+    </main>
+    <footer>Raasta · AI ki madad se banaya · Demo City Hospital kaalpanik hai</footer>
+    <script>
+      document.getElementById('openAll').onclick = () => document.querySelectorAll('details').forEach((d) => (d.open = true));
+      document.getElementById('closeAll').onclick = () => document.querySelectorAll('details').forEach((d) => (d.open = false));
+    </script>
+  </body>
+</html>

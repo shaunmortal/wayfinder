@@ -1,0 +1,6 @@
+dist
+node_modules
+public/sites
+reference
+*.md
+public/tech.html
