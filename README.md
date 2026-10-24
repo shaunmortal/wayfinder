@@ -5,8 +5,6 @@ Scan a QR code, say where you need to go in Hindi, Hinglish or English, and foll
 2D or 3D map, with a real photo of each turn. No app install, no beacons: a building's map is traced from one
 photo of the fire evacuation plan that is already on its wall.
 
-Built with Claude and Claude Code for the **Claude Impact Lab, Bhopal** (MPSeDC + Government of Madhya Pradesh).
-
 > Hackathon prototype. Not an official app of AIIMS or any hospital. Room sizes are approximate.
 > "Demo City Hospital" is a made-up, AIIMS-sized building (4 blocks round a garden, 4 floors, ~190 rooms).
 
