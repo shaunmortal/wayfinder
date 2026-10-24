@@ -18,10 +18,14 @@ const ok = (parsed: unknown) => parsed;
 let ipN = 0;
 const freshIp = () => `10.0.0.${++ipN}`;
 
+// Tests must not depend on a developer's local .env (vitest loads it through vite.config).
+const savedKey = process.env.GEMINI_API_KEY;
 beforeEach(() => {
+  delete process.env.GEMINI_API_KEY;
   ai.set(fake);
 });
 afterEach(() => {
+  if (savedKey !== undefined) process.env.GEMINI_API_KEY = savedKey;
   ai.set(null);
 });
 
@@ -105,15 +109,15 @@ describe('/api/slip (OPD slip photo)', () => {
 });
 
 describe('model choice', () => {
-  it('uses Claude when ANTHROPIC_API_KEY is set, Gemma otherwise', () => {
-    const prev = process.env.ANTHROPIC_API_KEY;
+  it('uses Gemma 4 on the Gemini API when GEMINI_API_KEY is set, local Gemma otherwise', () => {
+    const prev = process.env.GEMINI_API_KEY;
     try {
-      process.env.ANTHROPIC_API_KEY = 'test';
-      expect(MODEL()).toBe('claude-opus-5-5');
-      delete process.env.ANTHROPIC_API_KEY;
+      process.env.GEMINI_API_KEY = 'test';
+      expect(MODEL()).toBe('gemma-4-26b-a4b-it');
+      delete process.env.GEMINI_API_KEY;
       expect(MODEL()).toBe('gemma4:e2b-it-qat');
     } finally {
-      if (prev !== undefined) process.env.ANTHROPIC_API_KEY = prev;
+      if (prev !== undefined) process.env.GEMINI_API_KEY = prev;
     }
   });
 });

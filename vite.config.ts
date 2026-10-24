@@ -55,10 +55,11 @@ function apiRoutes(): Plugin {
 }
 
 export default defineConfig(({ mode }) => {
-  // Make .env (ANTHROPIC_API_KEY, CLAUDE_MODEL…) visible to the api handlers; never exposed to the browser.
+  // Make .env (GEMINI_API_KEY, GEMMA_MODEL…) visible to the api handlers; never exposed to the browser.
   Object.assign(process.env, { ...loadEnv(mode, process.cwd(), ''), ...process.env });
   return {
     plugins: [apiRoutes()],
+    build: { rollupOptions: { input: { main: 'index.html', landing: 'landing.html' } } },
     // Allow sharing through a Cloudflare quick tunnel (cloudflared tunnel --url ...).
     server: { allowedHosts: ['.trycloudflare.com'] },
     preview: { allowedHosts: ['.trycloudflare.com'] },

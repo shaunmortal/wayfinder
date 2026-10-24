@@ -10,7 +10,7 @@ import { G, enterSite, graphById, graphs, okRoute, recompute, state } from './st
 import { $, isPhone, toast } from './ui/dom';
 import { dirListHTML } from './ui/directory';
 import { closeSugg, renderAiMsg, renderHead, renderSugg } from './ui/head';
-import { placeLabel, spotLabel, stepText, tr } from './ui/bound';
+import { spotLabel, tr } from './ui/bound';
 import { renderAll, renderBody } from './ui/render';
 import { renderChrome } from './ui/shell';
 import { nextVoice, noHindiVoice, speak, stopSpeaking, type Bilingual } from './voice/speak';
@@ -34,7 +34,7 @@ export async function toggle3D(on: boolean, real = false) {
   } finally {
     msg.hidden = true;
   }
-  renderChrome(hooks.is3D());
+  renderChrome();
 }
 
 interface RecogResult {
@@ -114,7 +114,7 @@ const stepBoth = (st: Step): Bilingual => bi((l) => T.stepText(G(), okRoute()!, 
 
 const scrollTo = (sel: string) => $(sel).scrollIntoView({ behavior: 'smooth', block: 'start' });
 const redraw = () => {
-  renderChrome(hooks.is3D());
+  renderChrome();
   renderHead();
   renderBody();
   renderMap();
@@ -142,7 +142,7 @@ export function setStart(id: string) {
   if (!G().startable.includes(id)) return;
   Object.assign(state, { start: id, floor: G().nodes[id].floor, view: 'home', nav: false, photo: { status: 'idle' }, routeIdx: null });
   recompute();
-  renderAll(hooks.is3D());
+  renderAll();
   fitRoute();
   toast(tr('startSet', spotLabel(id)));
 }
@@ -157,7 +157,7 @@ export function switchSite(id: string, startId?: string | null) {
   refreshLive();
   buildFloors($('#floors'));
   recompute();
-  renderAll(hooks.is3D());
+  renderAll();
   fitRoute();
 }
 
@@ -197,7 +197,7 @@ function applyTrip(start: string | null, dest: string | null) {
   }
   Object.assign(state, { view: 'home', nav: false });
   recompute();
-  renderAll(hooks.is3D());
+  renderAll();
   fitRoute();
 }
 
@@ -365,7 +365,7 @@ function navIssue(kind: Issue, aloud: boolean) {
         : biKey('issueBlockOk', m);
   state.navNote = msg;
   focusStep();
-  renderChrome(hooks.is3D());
+  renderChrome();
   say(msg, aloud);
 }
 
@@ -406,7 +406,7 @@ function navStart(i = 0) {
     state.navNote = null;
   }
   Object.assign(state, { nav: true, stepIdx: i });
-  renderChrome(hooks.is3D());
+  renderChrome();
   focusStep();
   if (isPhone()) scrollTo('#mapwrap');
 }
@@ -549,7 +549,7 @@ export function act(el: { dataset: DOMStringMap; classList?: DOMTokenList; setAt
       }
       if (state.photo.status !== 'reading') state.photo = { status: 'idle' };
       buildFloors($('#floors'));
-      renderAll(hooks.is3D());
+      renderAll();
       break;
     case 'navstart':
       navStart(0);
@@ -752,7 +752,7 @@ export function wireEvents() {
       state.ai = { status: 'idle' };
       toast(tr(t.checked ? 'offlineOn' : 'offlineOff'));
       refreshLive();
-      renderAll(hooks.is3D());
+      renderAll();
     }
     if (t.id === 'photoIn') {
       const f = t.files?.[0];

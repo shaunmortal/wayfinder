@@ -8,8 +8,7 @@ import { floorName, isHi, pShort, tr } from '../ui/bound';
 import { V3, catVar, cssCol, disposeGroup, elev, fmat, m3, type Label3 } from './scene';
 import { addFurniture, addTrees } from './furniture';
 
-const WALLH = 2.4,
-  WT = 0.2;
+const WALLH = 2.4;
 
 function edges(me: THREE.Mesh, floor: string) {
   const l = new THREE.LineSegments(new THREE.EdgesGeometry(me.geometry), fmat(floor, 'edge', '--m-rim', 0.9, true));

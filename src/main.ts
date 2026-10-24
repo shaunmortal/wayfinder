@@ -36,7 +36,7 @@ async function boot() {
   aiStatus().then((on) => {
     state.aiAvail = on;
     state.aiOn = on && !state.offlineDemo;
-    if (on) renderAll(hooks.is3D()); // show the Claude-only buttons (Ask Claude, slip photo, sign photo)
+    if (on) renderAll(); // show the Claude-only buttons (Ask Claude, slip photo, sign photo)
   });
   // Production builds keep working offline after the first visit (dev skips this to avoid stale caches).
   if (import.meta.env.PROD && 'serviceWorker' in navigator) navigator.serviceWorker.register('/sw.js').catch(() => {});

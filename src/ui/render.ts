@@ -40,9 +40,9 @@ export function renderBody() {
   if (pm) pm.textContent = state.photo.text || '';
 }
 
-/** Re-render everything. `is3D` only matters for the toggle button label (3D arrives in milestone 3). */
-export function renderAll(is3D = false) {
-  renderChrome(is3D);
+/** Re-render everything. */
+export function renderAll() {
+  renderChrome();
   renderHead();
   renderBody();
   renderMap();

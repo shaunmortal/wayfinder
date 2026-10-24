@@ -1,5 +1,4 @@
 // Shared server code for the api/ functions (files starting with "_" are not deployed as endpoints).
-import Anthropic from '@anthropic-ai/sdk';
 import { z } from 'zod';
 import { parseSite } from '../src/data/loadSites';
 import { buildGraph } from '../src/engine/graph';
@@ -14,11 +13,13 @@ export const graphs: Record<string, Graph> = Object.fromEntries(
   }),
 );
 
-// With ANTHROPIC_API_KEY set, Claude answers over the API (nothing heavy runs on the laptop).
-// Without it, Gemma 4 (QAT build: the default e2b tag does not fit in 8 GB RAM) runs locally through Ollama (https://ollama.com).
-const useClaude = () => !!process.env.ANTHROPIC_API_KEY;
-export const MODEL = () => (useClaude() ? process.env.CLAUDE_MODEL || 'claude-opus-5-5' : process.env.GEMMA_MODEL || 'gemma4:e2b-it-qat');
+// Gemma 4 answers every AI call. With GEMINI_API_KEY set it runs hosted on Google's Gemini API (nothing heavy on the
+// laptop); without it, the same open model runs locally through Ollama (QAT build: the default e2b tag does not fit in 8 GB RAM).
+const useGeminiApi = () => !!process.env.GEMINI_API_KEY;
+export const MODEL = () =>
+  useGeminiApi() ? process.env.GEMMA_API_MODEL || 'gemma-4-26b-a4b-it' : process.env.GEMMA_MODEL || 'gemma4:e2b-it-qat';
 const OLLAMA_URL = () => (process.env.OLLAMA_URL || 'http://127.0.0.1:11434').replace(/\/$/, '');
+const GEMINI_URL = 'https://generativelanguage.googleapis.com/v1beta/models';
 export const hasKey = () => true;
 
 export interface ChatBody {
@@ -38,34 +39,36 @@ async function ollamaChat(body: ChatBody, signal: AbortSignal): Promise<string> 
 const IMAGE_TYPES = { '/9j/': 'image/jpeg', iVBOR: 'image/png', R0lG: 'image/gif', UklG: 'image/webp' } as const;
 const imageType = (b64: string) => Object.entries(IMAGE_TYPES).find(([magic]) => b64.startsWith(magic))?.[1] ?? 'image/jpeg';
 
-async function claudeChat(body: ChatBody, signal: AbortSignal): Promise<string> {
+type GeminiReply = { candidates?: { content?: { parts?: { text?: string; thought?: boolean }[] } }[] };
+
+/** Same request shape as Ollama, sent to Gemma 4 on the Gemini API. Thinking parts are dropped; only the answer is returned. */
+async function geminiChat(body: ChatBody, signal: AbortSignal): Promise<string> {
   const { content, images = [] } = body.messages[0];
-  const r = await new Anthropic().messages.create(
-    {
-      model: body.model,
-      max_tokens: 4096,
-      // Short lookups: low effort keeps answers fast and cheap.
-      output_config: { effort: 'low', format: { type: 'json_schema', schema: body.format as Record<string, unknown> } },
-      messages: [
-        {
-          role: 'user',
-          content: [
-            ...images.map((data) => ({
-              type: 'image' as const,
-              source: { type: 'base64' as const, media_type: imageType(data), data },
-            })),
-            { type: 'text' as const, text: content },
-          ],
-        },
-      ],
-    },
-    { signal },
-  );
-  if (r.stop_reason === 'refusal') throw new Error('claude refused');
-  return r.content.flatMap((b) => (b.type === 'text' ? [b.text] : [])).join('');
+  const { $schema: _drop, ...schema } = body.format as Record<string, unknown>;
+  const send = () =>
+    fetch(`${GEMINI_URL}/${body.model}:generateContent`, {
+      method: 'POST',
+      signal,
+      headers: { 'content-type': 'application/json', 'x-goog-api-key': process.env.GEMINI_API_KEY! },
+      body: JSON.stringify({
+        contents: [
+          { role: 'user', parts: [...images.map((data) => ({ inline_data: { mime_type: imageType(data), data } })), { text: content }] },
+        ],
+        generationConfig: { temperature: body.options.temperature, responseMimeType: 'application/json', responseJsonSchema: schema },
+      }),
+    });
+  let r = await send();
+  if (r.status >= 500) r = await send(); // the hosted API sometimes returns a one-off 500 INTERNAL
+  if (!r.ok) throw new Error(`gemini ${r.status}: ${(await r.text()).slice(0, 200)}`);
+  const parts = ((await r.json()) as GeminiReply).candidates?.[0]?.content?.parts ?? [];
+  return parts
+    .filter((p) => !p.thought)
+    .map((p) => p.text ?? '')
+    .join('')
+    .replace(/^\s*```(?:json)?\s*|\s*```\s*$/g, '');
 }
 
-const defaultChat = (body: ChatBody, signal: AbortSignal) => (useClaude() ? claudeChat(body, signal) : ollamaChat(body, signal));
+const defaultChat = (body: ChatBody, signal: AbortSignal) => (useGeminiApi() ? geminiChat(body, signal) : ollamaChat(body, signal));
 /** Overridable in tests. */
 export const ai = {
   chat: defaultChat,
@@ -120,6 +123,8 @@ export function failFrom(err: unknown) {
   if (err instanceof Error && err.name === 'TimeoutError') return fail('timeout');
   // Ollama not running: same as "no AI" so the page falls back to the offline search.
   if (err instanceof TypeError && err.message === 'fetch failed') return fail('no_key');
+  // Hosted free tier quota: tell the page plainly so it uses the offline search at once.
+  if (err instanceof Error && err.message.startsWith('gemini 429')) return fail('rate_limited');
   console.error('[raasta api]', err instanceof Error ? err.message : err);
   return fail('upstream');
 }
@@ -157,8 +162,13 @@ export function buildAskPrompt(g: Graph, q: string, start: string) {
   const S = g.site,
     FL = g.floors,
     sn = g.nodes[start];
-  const list = S.places.map((p) => `${p.id} | ${p.en} | ${p.hi} | ${FL[p.floor].en}`).join('\n');
-  const spots = g.startable.map((id) => `${id} | ${spotEn(g, id)} | ${FL[g.nodes[id].floor].en}`).join('\n');
+  // English names only and no repeats: Devanagari costs several tokens a letter, and the model maps Hindi requests to
+  // English names fine. Keeps the prompt small enough for a hosted free tier and fast on a laptop.
+  const list = S.places.map((p) => `${p.id} | ${p.en} | ${FL[p.floor].en}`).join('\n');
+  const spots = g.startable
+    .filter((id) => !g.places[id])
+    .map((id) => `${id} | ${spotEn(g, id)} | ${FL[g.nodes[id].floor].en}`)
+    .join('\n');
   const wcs = g.wc.length
     ? `\n- For toilets, pick the one closest to the visitor, preferring their current floor: ${g.wc.join(', ')}.`
     : '';
@@ -169,10 +179,10 @@ A visitor typed this request (it may be Hindi, Hinglish or English):
 
 They are currently at: ${start} (${spotEn(g, start)}, ${FL[sn.floor].en}).
 
-Places they can be taken to (id | English | Hindi | floor):
+Places they can be taken to (id | name | floor):
 ${list}
 
-Spots where a visitor can be standing (id | name | floor):
+Other spots where a visitor can be standing, besides the places above (id | name | floor):
 ${spots}
 
 Rules:

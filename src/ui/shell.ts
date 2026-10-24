@@ -18,7 +18,7 @@ export function siteSwitch() {
     .join('')}</div>`;
 }
 
-export function renderChrome(is3D = false) {
+export function renderChrome() {
   const S = G().site,
     help = S.help as { emg?: string } | undefined;
   document.documentElement.lang = isHi() ? 'hi' : 'en';
